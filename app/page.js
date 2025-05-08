@@ -473,7 +473,7 @@ export default function Home() {
                   <span className="text-sm">Develop curriculum and workshop content</span>
                 </li>
               </ul>
-              <Link href="#" className="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center group">
+              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
                 Apply Now
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
@@ -514,7 +514,7 @@ export default function Home() {
                   <span className="text-sm">Build our online community and digital presence</span>
                 </li>
               </ul>
-              <Link href="#" className="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center group">
+              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
                 Apply Now
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
@@ -555,7 +555,7 @@ export default function Home() {
                   <span className="text-sm">Coordinate with secondary schools for program implementation</span>
                 </li>
               </ul>
-              <Link href="#" className="text-primary-light dark:text-primary-dark font-medium hover:underline inline-flex items-center group">
+              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
                 Apply Now
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
@@ -757,32 +757,6 @@ export default function Home() {
                   <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
                   <a 
                     href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/cleveland.png" 
-                    alt="cleveland" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Cleveland</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
-                  <a 
-                    href="https://www.linkedin.com/in/cleverleverland" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
