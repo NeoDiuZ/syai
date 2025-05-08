@@ -117,7 +117,7 @@ const Navbar = () => {
             <button
               id="menu-button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light dark:hover:bg-surface-dark transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light dark:hover:bg-surface-dark transition-colors border-2 border-red-500"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -139,7 +139,7 @@ const Navbar = () => {
           
           <div
             id="mobile-menu-container"
-            className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-xl z-50 transform transition-transform duration-300 ease-in-out border-2 border-blue-500 ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } overflow-auto`}
           >
