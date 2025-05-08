@@ -65,7 +65,6 @@ const Navbar = () => {
   */
 
   // Prevent body scroll when menu is open
-  /*
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -76,7 +75,6 @@ const Navbar = () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
-  */
 
   // Define navigation items
   const navItems = [
@@ -139,9 +137,9 @@ const Navbar = () => {
           
           <div
             id="mobile-menu-container"
-            className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-xl z-50 transform transition-transform duration-300 ease-in-out border-2 border-blue-500 flex flex-col ${
+            className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+            } overflow-auto`}
           >
             <div className="flex justify-end p-4">
               <button
@@ -152,7 +150,7 @@ const Navbar = () => {
               </button>
             </div>
             
-            <div className="px-4 py-2 flex flex-col flex-grow overflow-y-auto">
+            <div className="px-4 py-2 h-[calc(100%-5rem)] flex flex-col">
               <div className="flex-grow">
                 <h3 className="text-xs uppercase tracking-wider text-text-light/60 dark:text-text-dark/60 font-semibold mb-3 px-2">Navigation</h3>
                 <div className="space-y-1 mb-6">
