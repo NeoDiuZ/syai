@@ -151,12 +151,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                  </svg>
-                </div>
+                <Image
+                  src="/gallery/meetup.jpg"
+                  alt="SYAI Monthly AI Meetup Group Photo"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20"></div>
               </div>
 
               <div className="space-y-6">

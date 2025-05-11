@@ -132,10 +132,8 @@ const InteractiveGrid = () => {
       onMouseLeave={handleMouseLeave}
       style={{ 
         perspective: '1000px',
-        border: '2px solid red',
       }}
     >
-      {console.log('InteractiveGrid mounted, dimensions:', dimensions)}
       {/* Background grid pattern - only visible when hovering */}
       <div className="absolute inset-0" style={gridPattern}></div>
       
