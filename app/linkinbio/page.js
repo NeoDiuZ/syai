@@ -44,8 +44,8 @@ export default function LinkInBio() {
       href: "https://sgyouthai.org/events/echelon2025",
     },
     {
-      name: "CYS x SYAI Monthly AI Meetup (Apr 2025)",
-      href: "https://forms.gle/PijaYbwcFEEEJ6qo6",
+      name: "CYS x SYAI Monthly AI Meetup (May 2025)",
+      href: "https://aisdc.aisingapore.org/6",
     },
     {
       name: "Join SYAI Committee today!",

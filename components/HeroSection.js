@@ -29,10 +29,13 @@ const HeroSection = () => {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="#join-community"
-            className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-all transform hover:scale-105 font-medium text-lg"
+            href="https://t.me/sgyouthai"
+            className="relative rounded-lg px-6 py-3 text-white font-medium text-lg overflow-hidden group"
           >
-            Join the Community
+            <span className="relative z-10">Join the Community</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient-x"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
           <Link
             href="#about"

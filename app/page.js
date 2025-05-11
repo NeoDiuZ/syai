@@ -24,9 +24,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-4 border border-primary-light/10 dark:border-primary-dark/10 rounded-2xl bg-background-light dark:bg-background-dark">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white">
-                SYAI
-              </div>
+              <Image
+                src="/SYAI_Logo.png"
+                alt="SYAI Logo"
+                fill
+                className="object-contain p-8"
+                priority
+              />
             </div>
             <div>
               <p className="text-lg text-text-light/90 dark:text-text-dark/90 mb-6">
@@ -117,11 +121,12 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <Link
-              href="#"
-              className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-all inline-flex items-center"
+              href="https://forms.gle/cYjQnkqBKeS9vpeo8"
+              className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x"
             >
-              Sign up for SYAI Inspire Bootcamps
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+              <span className="relative z-10">Sign up for SYAI Inspire Bootcamps</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
@@ -253,9 +258,10 @@ export default function Home() {
               </div>
               <div className="mt-6 text-center">
                  {/* Enhanced Button Hover */}
-                <Link href="#" className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 hover:scale-105 transition-all duration-200 inline-flex items-center transform">
-                  Register for this month&apos;s AI Meetup
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                <Link href="https://aisdc.aisingapore.org/" className="rounded-lg px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white hover:opacity-90 hover:scale-105 transition-all duration-300 inline-flex items-center transform hover:shadow-lg relative overflow-hidden group animate-gradient-x">
+                  <span className="relative z-10">Register for this month&apos;s AI Meetup</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                     <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </Link>
@@ -307,14 +313,15 @@ export default function Home() {
                 </div>
               </div>
               
-              <Link href="https://t.me/sgyouthai" className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-all inline-flex items-center">
-                Subscribe to our newsletter
+              <Link href="https://t.me/sgyouthai" className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x">
+                <span className="relative z-10">Subscribe to our newsletter</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
                 <svg 
                   width="20" 
                   height="20" 
                   viewBox="0 0 24 24" 
                   fill="currentColor"
-                  className="ml-2"
+                  className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform"
                 >
                   <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.568 8.16c-.18 1.896-.96 6.504-1.356 8.628-.168.9-.504 1.2-.816 1.236-.696.06-1.224-.456-1.896-.9-1.056-.696-1.656-1.128-2.676-1.8-1.188-.78-.42-1.212.264-1.908.18-.18 3.252-2.976 3.312-3.228a.24.24 0 00-.06-.216c-.072-.06-.168-.036-.252-.024-.108.024-1.788 1.14-5.064 3.348-.48.324-.912.492-1.296.48-.432-.012-1.248-.24-1.86-.444-.756-.24-1.344-.372-1.296-.792.024-.216.324-.432.888-.66 3.504-1.524 5.832-2.532 6.996-3.012 3.336-1.392 4.02-1.632 4.476-1.632.096 0 .324.024.468.144.12.096.156.228.168.324-.012.072.012.288 0 .456z"/>
                 </svg>
@@ -348,9 +355,10 @@ export default function Home() {
                 </div>
               </div>
               
-              <Link href="#" className="rounded-lg px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark hover:bg-primary-light/5 dark:hover:bg-primary-dark/5 transition-all inline-flex items-center">
-                View AI Events Calendar
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+              <Link href="#" className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x">
+                <span className="relative z-10">View AI Events Calendar</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="16" y1="2" x2="16" y2="6"></line>
                   <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -367,10 +375,11 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="#"
-              className="rounded-lg px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:scale-105 transition-all duration-200 inline-flex items-center transform"
+              className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x"
             >
-              View All Articles
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+              <span className="relative z-10">View All Articles</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
@@ -473,9 +482,10 @@ export default function Home() {
                   <span className="text-sm">Develop curriculum and workshop content</span>
                 </li>
               </ul>
-              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
-                Apply Now
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
+              <Link href="https://forms.gle/VKgYwhSoB9dChtct8" className="rounded-lg px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white hover:opacity-90 hover:scale-105 transition-all duration-300 inline-flex items-center transform hover:shadow-lg relative overflow-hidden group animate-gradient-x">
+                <span className="relative z-10">Apply Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
@@ -514,9 +524,13 @@ export default function Home() {
                   <span className="text-sm">Build our online community and digital presence</span>
                 </li>
               </ul>
-              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
-                Apply Now
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
+              <Link
+                href="https://forms.gle/VKgYwhSoB9dChtct8"
+                className="rounded-lg px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white hover:opacity-90 hover:scale-105 transition-all duration-300 inline-flex items-center transform hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+              >
+                <span className="relative z-10">Apply Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
@@ -555,9 +569,13 @@ export default function Home() {
                   <span className="text-sm">Coordinate with secondary schools for program implementation</span>
                 </li>
               </ul>
-              <Link href="#" className="text-secondary-light dark:text-secondary-dark hover:underline underline-offset-4 decoration-2 decoration-current hover:text-primary-light dark:hover:text-primary-dark font-medium inline-flex items-center group">
-                Apply Now
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 group-hover:translate-x-1 transition-transform">
+              <Link
+                href="https://forms.gle/VKgYwhSoB9dChtct8"
+                className="rounded-lg px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white hover:opacity-90 hover:scale-105 transition-all duration-300 inline-flex items-center transform hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+              >
+                <span className="relative z-10">Apply Now</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                   <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
@@ -571,11 +589,12 @@ export default function Home() {
           <div className="text-center mt-8">
              {/* Enhanced Button Hover */}
             <Link
-              href="#"
-              className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 hover:scale-105 transition-all duration-200 inline-flex items-center transform"
+              href="https://forms.gle/VKgYwhSoB9dChtct8"
+              className="rounded-lg px-6 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white hover:opacity-90 hover:scale-105 transition-all duration-300 inline-flex items-center transform hover:shadow-lg relative overflow-hidden group animate-gradient-x"
             >
-              Apply to Join the SYAI Committee
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+              <span className="relative z-10">Apply to Join the SYAI Committee</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
@@ -670,32 +689,6 @@ export default function Home() {
                   <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
                   <a 
                     href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-              {/* Cleveland */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/cleveland.png" 
-                    alt="cleveland" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Cleveland</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
-                  <a 
-                    href="https://www.linkedin.com/in/cleverleverland" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
@@ -1144,11 +1137,12 @@ export default function Home() {
 
           <div className="mt-10 text-center">
             <Link
-              href="#join-committee"
-              className="rounded-lg px-6 py-3 bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-all inline-flex items-center"
+              href="#https://forms.gle/VKgYwhSoB9dChtct8"
+              className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x"
             >
-              Join Our Team
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+              <span className="relative z-10">Join Our Team</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
@@ -1304,10 +1298,10 @@ export default function Home() {
       <style jsx global>{`
         @keyframes marquee-ltr {
           0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); } /* Changed from -100% */
+          100% { transform: translateX(-50%); }
         }
         @keyframes marquee-rtl {
-          0% { transform: translateX(-50%); } /* Changed from -100% */
+          0% { transform: translateX(-50%); }
           100% { transform: translateX(0%); }
         }
         .marquee-content-ltr {
@@ -1316,10 +1310,26 @@ export default function Home() {
         .marquee-content-rtl {
           animation: marquee-rtl 30s linear infinite;
         }
-        /* Apply pause on hover to the outer container */
         .overflow-hidden:hover > .marquee-content-ltr,
         .overflow-hidden:hover > .marquee-content-rtl {
             animation-play-state: paused;
+        }
+
+        @keyframes gradient-x {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 3s ease infinite;
         }
       `}</style>
     </div>

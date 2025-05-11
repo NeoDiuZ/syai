@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Icons
 const MenuIcon = () => (
@@ -90,7 +91,7 @@ const Navbar = () => {
   ];
 
   const actionButtons = [
-    { name: "Join Community", href: "#join-community", isPrimary: true },
+    { name: "Join Community", href: "https://t.me/sgyouthai", isPrimary: true },
     { name: "Join Committee", href: "#join-committee", isPrimary: false },
   ];
 
@@ -105,8 +106,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-primary-light dark:text-primary-dark">
-              <span className="text-sm mr-1 text-secondary-light dark:text-secondary-dark">SY</span>AI
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/SYAI_Logo.png"
+                alt="SYAI Logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+                priority
+              />
             </Link>
           </div>
 

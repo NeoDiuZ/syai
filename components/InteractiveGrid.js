@@ -95,11 +95,11 @@ const InteractiveGrid = () => {
                 width: cellWidth,
                 height: cellHeight,
                 // Only show borders and effects when hovering
-                borderRight: '1px solid rgba(136, 136, 136, 0.15)',
-                borderBottom: '1px solid rgba(136, 136, 136, 0.15)',
-                backgroundColor: isActive ? `rgba(99, 102, 241, ${opacity * 0.15})` : 'transparent',
+                borderRight: '1px solid rgba(136, 136, 136, 0.2)',
+                borderBottom: '1px solid rgba(136, 136, 136, 0.2)',
+                backgroundColor: isActive ? `rgba(99, 102, 241, ${opacity * 0.25})` : 'transparent',
                 boxShadow: isActive 
-                  ? `0 0 ${12 * opacity}px ${3 * opacity}px rgba(111, 114, 245, ${opacity * 0.3})` 
+                  ? `0 0 ${12 * opacity}px ${3 * opacity}px rgba(111, 114, 245, ${opacity * 0.4})` 
                   : 'none',
                 opacity: 1,
                 transition: 'background-color 150ms ease-out, box-shadow 150ms ease-out',
@@ -119,7 +119,7 @@ const InteractiveGrid = () => {
     height: '100%',
     backgroundSize: `${cellWidth}px ${cellHeight}px`,
     backgroundImage: isHovering 
-      ? 'linear-gradient(to right, rgba(136, 136, 136, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(136, 136, 136, 0.05) 1px, transparent 1px)'
+      ? 'linear-gradient(to right, rgba(136, 136, 136, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(136, 136, 136, 0.15) 1px, transparent 1px)'
       : 'none',
     transition: 'background-image 0.3s ease-in-out',
   };
@@ -132,8 +132,10 @@ const InteractiveGrid = () => {
       onMouseLeave={handleMouseLeave}
       style={{ 
         perspective: '1000px',
+        border: '2px solid red',
       }}
     >
+      {console.log('InteractiveGrid mounted, dimensions:', dimensions)}
       {/* Background grid pattern - only visible when hovering */}
       <div className="absolute inset-0" style={gridPattern}></div>
       
@@ -151,8 +153,8 @@ const InteractiveGrid = () => {
             top: mousePosition.y - 100,
             width: 200,
             height: 200,
-            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(99, 102, 241, 0.1) 40%, transparent 70%)',
-            opacity: 0.8,
+            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(99, 102, 241, 0.2) 40%, transparent 70%)',
+            opacity: 0.9,
             transition: 'left 50ms linear, top 50ms linear',
             mixBlendMode: 'screen',
           }}

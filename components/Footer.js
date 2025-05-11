@@ -26,9 +26,9 @@ const Footer = () => {
     {
       title: "Community",
       links: [
-        { name: "Join Community", href: "#join-community" },
+        { name: "Join Community", href: "https://t.me/sgyouthai" },
         { name: "Join Committee", href: "#join-committee" },
-        { name: "Monthly Meetup", href: "https://forms.gle/PijaYbwcFEEEJ6qo6", isExternal: true },
+        { name: "Monthly Meetup", href: "https://aisdc.aisingapore.org/", isExternal: true },
         { name: "Gallery", href: "#gallery" },
       ],
     },
