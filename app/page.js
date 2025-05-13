@@ -714,7 +714,7 @@ export default function Home() {
                 <div className="p-3">
                   <h3 className="font-bold text-sm">Cleveland</h3>
                   {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
+                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
                   <a 
                     href="https://www.linkedin.com/in/cleverleverland" 
                     target="_blank" 
