@@ -30,20 +30,41 @@ const InteractiveGrid = () => {
     };
   }, []);
 
-  // Handle mouse movement with throttling for performance
-  const handleMouseMove = (e) => {
+  // Unified handler for pointer movement (mouse or touch)
+  const handlePointerMove = (clientX, clientY) => {
     if (!gridRef.current) return;
     
     const rect = gridRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
     
     setMousePosition({ x, y });
-    setIsHovering(true);
+    if (!isHovering) {
+      setIsHovering(true);
+    }
   };
 
-  // Handle mouse leave
+  const handleMouseMove = (e) => {
+    handlePointerMove(e.clientX, e.clientY);
+  };
+
   const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
+  const handleTouchStart = (e) => {
+    if (e.touches.length > 0) {
+      handlePointerMove(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (e.touches.length > 0) {
+      handlePointerMove(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  };
+
+  const handleTouchEnd = () => {
     setIsHovering(false);
   };
 
@@ -130,6 +151,9 @@ const InteractiveGrid = () => {
       className="absolute inset-0 overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       style={{ 
         perspective: '1000px',
       }}
