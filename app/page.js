@@ -451,14 +451,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Enhance Card Hovers */}
-            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent">
+            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent flex flex-col">
               <div className="h-12 w-12 rounded-lg bg-primary-light/10 dark:bg-primary-dark/10 flex items-center justify-center text-primary-light dark:text-primary-dark mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line>
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Programme Team</h3>
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-grow">
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light dark:text-primary-dark mt-1">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
@@ -493,14 +493,14 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent">
+            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent flex flex-col">
               <div className="h-12 w-12 rounded-lg bg-primary-light/10 dark:bg-primary-dark/10 flex items-center justify-center text-primary-light dark:text-primary-dark mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Social Team</h3>
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-grow">
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light dark:text-primary-dark mt-1">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
@@ -538,14 +538,14 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent">
+            <div className="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border-2 border-transparent flex flex-col">
               <div className="h-12 w-12 rounded-lg bg-primary-light/10 dark:bg-primary-dark/10 flex items-center justify-center text-primary-light dark:text-primary-dark mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-4">Outreach Team</h3>
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-grow">
                 <li className="flex items-start space-x-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light dark:text-primary-dark mt-1">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>

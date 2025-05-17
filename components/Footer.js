@@ -185,7 +185,4 @@ const Footer = () => {
   );
 };
 
-
-// testing push with Ray27th 2
-
 export default Footer; 
