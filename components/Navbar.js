@@ -112,7 +112,7 @@ const Navbar = () => {
                 alt="SYAI Logo"
                 width={312}
                 height={104}
-                className="h-26 w-80"
+                className="h-26 w-26"
                 priority
               />
             </Link>
