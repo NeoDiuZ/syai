@@ -101,7 +101,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-light/80 dark:bg-surface-dark/80 shadow-md backdrop-blur-md" : "bg-black/30 backdrop-blur-md"}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-light/80 dark:bg-surface-dark/80 shadow-md" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-32 md:h-36">
           {/* Logo */}
@@ -112,10 +112,12 @@ const Navbar = () => {
                 alt="SYAI Logo"
                 width={312}
                 height={104}
-                className="h-26 w-26"
+                className="h-32 w-32"
                 priority
               />
+              <span className="text-xl mr-1 text-secondary-light dark:text-secondary-dark">SY</span><span className="text-2xl mr-1 text-secondary-light dark:text-secondary-dark">AI</span>
             </Link>
+            
           </div>
 
           {/* Menu button - always visible on all screen sizes */}

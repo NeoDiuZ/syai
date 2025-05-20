@@ -45,7 +45,7 @@ export default function LinkInBio() {
     },
     {
       name: "CYS x SYAI Monthly AI Meetup (May 2025)",
-      href: "https://aisdc.aisingapore.org/6",
+      href: "https://aisdc.aisingapore.org/",
     },
     {
       name: "Join SYAI Committee today!",
