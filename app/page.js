@@ -23,7 +23,7 @@ export default function Home() {
       <section id="about" className="py-20 bg-surface-light dark:bg-surface-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Our <span className="text-primary-light dark:text-primary-dark">Story</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -64,7 +64,7 @@ export default function Home() {
       <section id="bootcamps" className="py-20 bg-surface-light dark:bg-surface-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               SYAI <span className="text-primary-light dark:text-primary-dark">Inspire</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -147,7 +147,7 @@ export default function Home() {
       <section id="aiconnect" className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               SYAI <span className="text-primary-light dark:text-primary-dark">Connect</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -278,7 +278,7 @@ export default function Home() {
       <section id="aitimes" className="py-20 bg-surface-light dark:bg-surface-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               SYAI <span className="text-primary-light dark:text-primary-dark">Times</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -398,7 +398,7 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Join the SYAI <span className="text-primary-light dark:text-primary-dark">Committee</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -609,7 +609,7 @@ export default function Home() {
       <section id="team" className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Our <span className="text-primary-light dark:text-primary-dark">Team</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -622,7 +622,7 @@ export default function Home() {
 
           {/* Board Members Section */}
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
               Board <span className="text-primary-light dark:text-primary-dark">Members</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 justify-center">
@@ -734,7 +734,7 @@ export default function Home() {
 
           {/* Excommittee Section */}
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
               Ex<span className="text-primary-light dark:text-primary-dark">committee</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 justify-center">
@@ -900,7 +900,7 @@ export default function Home() {
           
           {/* Subcommittee Section */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
               Sub<span className="text-primary-light dark:text-primary-dark">committee</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
@@ -1183,7 +1183,7 @@ export default function Home() {
       <section id="partners" className="py-20 bg-surface-light dark:bg-surface-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Our <span className="text-primary-light dark:text-primary-dark">Partners</span>
             </h2>
             {/* Use secondary color for underline */}
@@ -1242,7 +1242,7 @@ export default function Home() {
       <section id="gallery" className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Event <span className="text-primary-light dark:text-primary-dark">Gallery</span>
             </h2>
             {/* Use secondary color for underline */}

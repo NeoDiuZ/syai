@@ -91,7 +91,6 @@ const Navbar = () => {
   const actionButtons = [
     { name: "Join Telegram", href: "https://t.me/sgyouthai", isPrimary: true, type: "link" },
     { name: "Join Discord", href: "https://discord.gg/TacK5vbeDc", isPrimary: true, type: "link" },
-    { name: "Join Committee", href: "#join-committee", isPrimary: false, type: "link" },
   ];
 
   // Close menu when clicking a link
@@ -121,30 +120,33 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out"
               >
                 {item.name}
               </Link>
             ))}
-            {actionButtons.filter(btn => btn.name === "Join Committee").map((button) => (
-              <Link
-                key={button.name}
-                href={button.href}
-                className="ml-4 px-4 py-2 rounded-md text-sm font-medium border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10 transition-colors"
-              >
-                {button.name}
-              </Link>
-            ))}
             <Link
               href="https://t.me/sgyouthai"
-              className="ml-2 px-4 py-2 rounded-md text-sm font-medium bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
             >
-              Join Community
+              <span className="relative z-10">Join Telegram</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+            </Link>
+            <Link
+              href="https://discord.gg/TacK5vbeDc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+            >
+              <span className="relative z-10">Join Discord</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
             </Link>
           </div>
           
@@ -176,7 +178,7 @@ const Navbar = () => {
           
           <div
             id="mobile-menu-container"
-            className={`fixed top-0 right-0 w-full max-w-xs h-full bg-background-light dark:bg-background-dark shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 right-0 w-full max-w-xs h-full bg-white dark:bg-gray-800 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } flex flex-col overflow-hidden`}
           >
@@ -216,12 +218,13 @@ const Navbar = () => {
                         rel={button.type === 'link' ? 'noopener noreferrer' : undefined}
                         className={`block px-3 py-3 rounded-lg text-base font-medium transition-colors text-center ${
                           button.isPrimary
-                            ? "bg-gradient-to-r from-primary-light via-purple-500 to-secondary-light dark:from-primary-dark dark:via-purple-600 dark:to-secondary-dark text-white hover:opacity-90"
+                            ? "text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
                             : "border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10"
                         }`}
                         onClick={handleLinkClick}
                       >
-                        {button.name}
+                        <span className="relative z-10">{button.name}</span>
+                        {button.isPrimary && <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>}
                       </Link>
                     ))}
                   </div>
