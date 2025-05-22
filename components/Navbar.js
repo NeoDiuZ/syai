@@ -80,19 +80,18 @@ const Navbar = () => {
   // Define navigation items
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Features", href: "#features" },
     { name: "Bootcamps", href: "#bootcamps" },
     { name: "AIConnect", href: "#aiconnect" },
     { name: "AITimes", href: "#aitimes" },
     { name: "Partners", href: "#partners" },
     { name: "Team", href: "#team" },
     { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
   ];
 
   const actionButtons = [
-    { name: "Join Community", href: "https://t.me/sgyouthai", isPrimary: true },
-    { name: "Join Committee", href: "#join-committee", isPrimary: false },
+    { name: "Join Telegram", href: "https://t.me/sgyouthai", isPrimary: true, type: "link" },
+    { name: "Join Discord", href: "https://discord.gg/TacK5vbeDc", isPrimary: true, type: "link" },
+    { name: "Join Committee", href: "#join-committee", isPrimary: false, type: "link" },
   ];
 
   // Close menu when clicking a link
@@ -101,31 +100,60 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-light/80 dark:bg-surface-dark/80 shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32 md:h-36">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/SYAI_Logo.png"
                 alt="SYAI Logo"
-                width={312}
-                height={104}
-                className="h-32 w-32"
+                width={60}
+                height={60}
+                className="h-12 w-12 md:h-14 md:w-14"
                 priority
               />
-              <span className="text-xl mr-1 text-secondary-light dark:text-secondary-dark">SY</span><span className="text-2xl mr-1 text-secondary-light dark:text-secondary-dark">AI</span>
+              <span className="font-bold text-xl md:text-2xl text-text-light dark:text-text-dark">
+                SY<span className="text-primary-light dark:text-primary-dark">AI</span>
+              </span>
             </Link>
-            
           </div>
 
-          {/* Menu button - always visible on all screen sizes */}
-          <div className="flex items-center h-full">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="px-3 py-2 rounded-md text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+            {actionButtons.filter(btn => btn.name === "Join Committee").map((button) => (
+              <Link
+                key={button.name}
+                href={button.href}
+                className="ml-4 px-4 py-2 rounded-md text-sm font-medium border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10 transition-colors"
+              >
+                {button.name}
+              </Link>
+            ))}
+            <Link
+              href="https://t.me/sgyouthai"
+              className="ml-2 px-4 py-2 rounded-md text-sm font-medium bg-primary-light dark:bg-primary-dark text-white hover:opacity-90 transition-opacity"
+            >
+              Join Community
+            </Link>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
             <button
               id="menu-button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light dark:hover:bg-surface-dark transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light/50 dark:hover:bg-surface-dark/50 transition-colors"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -135,40 +163,41 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menu - Right Side Overlay (for all screen sizes) */}
+      {/* Mobile Menu - Right Side Overlay */}
       {mounted && (
         <>
           <div
-            className={`fixed inset-0 bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+            className={`fixed inset-0 bg-black/50 backdrop-blur-md z-40 transition-opacity duration-300 ease-in-out ${
               isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
+            onClick={() => setIsMenuOpen(false)}
             aria-hidden="true"
           ></div>
           
           <div
             id="mobile-menu-container"
-            className={`fixed top-0 right-0 w-3/4 max-w-sm h-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 right-0 w-full max-w-xs h-full bg-background-light dark:bg-background-dark shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } flex flex-col overflow-hidden`}
           >
-            <div className="flex justify-end p-4">
+            <div className="flex items-center justify-between p-4 border-b border-surface-light dark:border-surface-dark">
+              <span className="font-semibold text-lg text-text-light dark:text-text-dark">Menu</span>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light dark:hover:bg-surface-dark transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-text-light dark:text-text-dark hover:bg-surface-light/50 dark:hover:bg-surface-dark/50 transition-colors"
               >
                 <CloseIcon />
               </button>
             </div>
             
-            <div className="px-4 py-2 flex-grow flex flex-col overflow-y-auto">
+            <div className="px-2 py-3 flex-grow flex flex-col overflow-y-auto">
               <div className="flex-grow">
-                <h3 className="text-xs uppercase tracking-wider text-text-light/60 dark:text-text-dark/60 font-semibold mb-3 px-2">Navigation</h3>
                 <div className="space-y-1 mb-6">
                   {navItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center py-2.5 px-4 rounded-lg text-base font-medium text-text-light dark:text-text-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+                      className="flex items-center py-3 px-3 rounded-lg text-base font-medium text-text-light dark:text-text-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
                       onClick={handleLinkClick}
                     >
                       {item.name}
@@ -176,18 +205,20 @@ const Navbar = () => {
                   ))}
                 </div>
                 
-                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <h3 className="text-xs uppercase tracking-wider text-text-light/60 dark:text-text-dark/60 font-semibold mb-3 px-2">JOIN US</h3>
+                <div className="pt-4 border-t border-gray-200/60 dark:border-gray-700/60">
+                  <h3 className="text-xs uppercase tracking-wider text-text-light/60 dark:text-text-dark/60 font-semibold mb-3 px-2">Get Involved</h3>
                   <div className="space-y-2.5">
                     {actionButtons.map((button) => (
                       <Link
                         key={button.name}
                         href={button.href}
-                        className={`block px-4 py-2.5 rounded-lg text-base font-medium ${
+                        target={button.type === 'link' ? '_blank' : '_self'}
+                        rel={button.type === 'link' ? 'noopener noreferrer' : undefined}
+                        className={`block px-3 py-3 rounded-lg text-base font-medium transition-colors text-center ${
                           button.isPrimary
-                            ? "bg-primary-light dark:bg-primary-dark text-white"
+                            ? "bg-gradient-to-r from-primary-light via-purple-500 to-secondary-light dark:from-primary-dark dark:via-purple-600 dark:to-secondary-dark text-white hover:opacity-90"
                             : "border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10"
-                        } transition-colors text-center`}
+                        }`}
                         onClick={handleLinkClick}
                       >
                         {button.name}
@@ -197,9 +228,8 @@ const Navbar = () => {
                 </div>
               </div>
               
-              <div className="text-center text-text-light/60 dark:text-text-dark/60 text-sm mt-auto py-4">
+              <div className="text-center text-text-light/60 dark:text-text-dark/60 text-xs mt-auto py-4 border-t border-gray-200/60 dark:border-gray-700/60">
                 <p>© {new Date().getFullYear()} Singapore Youth AI</p>
-                <p className="mt-1">Building the future together</p>
               </div>
             </div>
           </div>

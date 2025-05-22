@@ -3,8 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import ImageCarousel from "@/components/ImageCarousel"; // Added import
 
 export default function Home() {
+  // Define images for the AIConnect carousel
+  const aiConnectImages = [
+    "/gallery/meetup.jpg",
+    "/gallery/yac.png",
+    "/gallery/syaigathering1.png",
+    "/gallery/mindfulhacksxsyai.png",
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -150,18 +159,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-8">
-                <Image
-                  src="/gallery/meetup.jpg"
-                  alt="SYAI Monthly AI Meetup Group Photo"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20"></div>
-              </div>
+              {/* Replace existing Image with ImageCarousel */}
+              <ImageCarousel images={aiConnectImages} /> 
 
-              <div className="space-y-6">
+              <div className="space-y-6 mt-8"> {/* Added mt-8 for spacing */}
                 <div className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-primary-light/10 dark:bg-primary-dark/10 flex items-center justify-center text-primary-light dark:text-primary-dark flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
