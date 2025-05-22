@@ -6,6 +6,22 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
+  safelist: [
+    'text-text-light',        
+    'dark:text-text-dark',    
+    'font-sans',              
+    'bg-white',
+    'dark:bg-gray-800',
+    // The following are more for ensuring specific shades are recognized if needed,
+    // though direct class usage (like text-text-light) is what's usually purged.
+    { pattern: /text-slate-700/ }, 
+    { pattern: /text-slate-200/ },
+    // Safelisting gradient classes used in buttons, just in case:
+    'bg-gradient-to-r',
+    'from-blue-600',
+    'via-purple-600',
+    'to-blue-600',
+  ],
   theme: {
     extend: {
       colors: {
