@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from 'next-themes';
+import { usePostHog } from 'posthog-js/react';
 
 // Icons
 const MenuIcon = () => (
@@ -24,6 +26,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const posthog = usePostHog();
 
   // Add useEffect to set mounted after initial render
   useEffect(() => {
@@ -79,13 +83,13 @@ const Navbar = () => {
 
   // Define navigation items
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Bootcamps", href: "#bootcamps" },
-    { name: "AIConnect", href: "#aiconnect" },
-    { name: "AITimes", href: "#aitimes" },
-    { name: "Partners", href: "#partners" },
-    { name: "Team", href: "#team" },
-    { name: "Gallery", href: "#gallery" },
+    { name: "About", href: "#about", type: "scroll" },
+    { name: "Bootcamps", href: "#bootcamps", type: "scroll" },
+    { name: "AIConnect", href: "#aiconnect", type: "scroll" },
+    { name: "AITimes", href: "#aitimes", type: "scroll" },
+    { name: "Partners", href: "#partners", type: "scroll" },
+    { name: "Team", href: "#team", type: "scroll" },
+    { name: "Gallery", href: "#gallery", type: "scroll" },
   ];
 
   const actionButtons = [
@@ -96,6 +100,33 @@ const Navbar = () => {
   // Close menu when clicking a link
   const handleLinkClick = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    // Track navigation clicks
+    posthog?.capture('navigation_clicked', {
+      section: href.replace('#', ''),
+      source: 'navbar'
+    });
+
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const handleExternalLink = (name, href) => {
+    posthog?.capture('external_link_clicked', {
+      link_name: name,
+      destination: href,
+      source: 'navbar'
+    });
   };
 
   return (
@@ -126,6 +157,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="px-3 py-2 rounded-md text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out"
+                onClick={(e) => handleScroll(e, item.href)}
               >
                 {item.name}
               </Link>
@@ -135,6 +167,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+              onClick={() => handleExternalLink("Join Telegram", "https://t.me/sgyouthai")}
             >
               <span className="relative z-10">Join Telegram</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
@@ -144,6 +177,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+              onClick={() => handleExternalLink("Join Discord", "https://discord.gg/TacK5vbeDc")}
             >
               <span className="relative z-10">Join Discord</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
@@ -200,7 +234,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className="flex items-center py-3 px-3 rounded-lg text-base font-medium text-text-light dark:text-text-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-                      onClick={handleLinkClick}
+                      onClick={(e) => handleScroll(e, item.href)}
                     >
                       {item.name}
                     </Link>
@@ -221,7 +255,10 @@ const Navbar = () => {
                             ? "text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
                             : "border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10"
                         }`}
-                        onClick={handleLinkClick}
+                        onClick={(e) => {
+                          handleScroll(e, button.href);
+                          handleExternalLink(button.name, button.href);
+                        }}
                       >
                         <span className="relative z-10">{button.name}</span>
                         {button.isPrimary && <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>}

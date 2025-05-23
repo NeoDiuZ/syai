@@ -85,27 +85,30 @@ export default function LinkInBio() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-var(--navbar-height,10rem))] flex flex-col items-center justify-center bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl w-full text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full text-center">
         {/* Profile Image */}
-        <div className="mb-6 flex justify-center">
-          <Image
-            src="/SYAI_Logo.png" // Assuming this path is correct in /public
-            className="h-24 w-24 rounded-full object-cover shadow-lg"
-            width={96}
-            height={96}
-            alt="SYAI Logo"
-            priority
-          />
+        <div className="mb-8 flex justify-center">
+          <div className="relative">
+            <Image
+              src="/SYAI_Logo.png"
+              className="h-32 w-32 rounded-full object-cover shadow-lg ring-4 ring-blue-500/20"
+              width={128}
+              height={128}
+              alt="SYAI Logo"
+              priority
+            />
+          </div>
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl font-bold mb-8">
-          @sgyouthai
+        <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+          Singapore Youth AI
         </h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">@sgyouthai</p>
 
         {/* Links */}
-        <div className="space-y-4 mb-10">
+        <div className="space-y-3 mb-10">
           {links.map((link, idx) => (
             <Link
               key={link.name + idx}
@@ -113,15 +116,38 @@ export default function LinkInBio() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => capture_linkInBio(link.name)}
-              className="flex items-center justify-center w-full px-6 py-4 rounded-lg 
-                         bg-surface-light dark:bg-surface-dark 
-                         hover:bg-primary-light/10 dark:hover:bg-primary-dark/10
-                         border border-primary-light/30 dark:border-primary-dark/30
-                         text-text-light dark:text-text-dark 
-                         hover:text-primary-light dark:hover:text-primary-dark
-                         font-medium text-center transition-colors duration-200 shadow-sm"d
+              className="flex items-center justify-center w-full px-6 py-4 rounded-xl 
+                         bg-white dark:bg-gray-800 
+                         hover:bg-blue-50 dark:hover:bg-gray-700
+                         border border-gray-200 dark:border-gray-700
+                         hover:border-blue-300 dark:hover:border-blue-600
+                         text-gray-900 dark:text-white 
+                         hover:text-blue-600 dark:hover:text-blue-400
+                         font-medium text-center transition-all duration-200 
+                         shadow-sm hover:shadow-md hover:scale-[1.02]
+                         transform"
             >
               {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-6">
+          {socials.map((social) => (
+            <Link
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => capture_social(social.name)}
+              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 
+                         hover:bg-blue-500 dark:hover:bg-blue-600 
+                         text-gray-600 dark:text-gray-400 
+                         hover:text-white dark:hover:text-white
+                         transition-all duration-200 hover:scale-110 transform"
+            >
+              {social.icon}
             </Link>
           ))}
         </div>

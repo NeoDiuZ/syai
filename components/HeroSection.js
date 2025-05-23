@@ -2,11 +2,15 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import { usePostHog } from 'posthog-js/react';
 
 // Import InteractiveGrid with client-side rendering only
 const InteractiveGrid = dynamic(() => import("@/components/InteractiveGrid"), { ssr: false });
 
 const HeroSection = () => {
+  const posthog = usePostHog();
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient */}
@@ -30,6 +34,12 @@ const HeroSection = () => {
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="https://t.me/sgyouthai"
+            onClick={() => posthog?.capture('hero_cta_clicked', { 
+              button_text: 'Join Our Community',
+              destination: 'telegram'
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative rounded-lg px-6 py-3 text-white font-medium text-lg overflow-hidden group"
           >
             <span className="relative z-10">Join the Community</span>

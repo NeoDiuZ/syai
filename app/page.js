@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ImageCarousel from "@/components/ImageCarousel";
 import { useState } from 'react';
+import { usePostHog } from 'posthog-js/react';
 
 // Newsletter Subscription Form Component
 function NewsletterSubscriptionForm() {
@@ -12,12 +13,18 @@ function NewsletterSubscriptionForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
+  const posthog = usePostHog();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage('');
     setIsError(false);
+
+    // Track newsletter subscription attempt
+    posthog?.capture('newsletter_subscription_attempted', {
+      email_domain: email.split('@')[1] || 'unknown'
+    });
 
     if (!email) {
       setMessage('Please enter your email.');
@@ -42,9 +49,20 @@ function NewsletterSubscriptionForm() {
       setMessage(data.message || 'Successfully subscribed!');
       setIsError(false);
       setEmail(''); // Clear input field on success
+      
+      // Track successful subscription
+      posthog?.capture('newsletter_subscription_successful', {
+        email_domain: email.split('@')[1] || 'unknown'
+      });
     } catch (error) {
       setMessage(error.message || 'Failed to subscribe. Please try again.');
       setIsError(true);
+      
+      // Track failed subscription
+      posthog?.capture('newsletter_subscription_failed', {
+        error: error.message,
+        email_domain: email.split('@')[1] || 'unknown'
+      });
     } finally {
       setLoading(false);
     }
@@ -100,7 +118,8 @@ function ContactSection() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // Added for loading state
+  const [isLoading, setIsLoading] = useState(false);
+  const posthog = usePostHog();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -111,6 +130,12 @@ function ContactSection() {
     setError('');
     setIsSubmitted(false);
     setIsLoading(true);
+
+    // Track contact form attempt
+    posthog?.capture('contact_form_attempted', {
+      message_length: formData.message.length,
+      email_domain: formData.email.split('@')[1] || 'unknown'
+    });
 
     if (!formData.name || !formData.email || !formData.message) {
       setError('All fields are required.');
@@ -137,9 +162,21 @@ function ContactSection() {
       }
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
+      
+      // Track successful contact form submission
+      posthog?.capture('contact_form_successful', {
+        message_length: formData.message.length,
+        email_domain: formData.email.split('@')[1] || 'unknown'
+      });
     } catch (err) {
       setError(err.message || 'An error occurred. Please try again.');
       setIsSubmitted(false);
+      
+      // Track failed contact form submission
+      posthog?.capture('contact_form_failed', {
+        error: err.message,
+        email_domain: formData.email.split('@')[1] || 'unknown'
+      });
     } finally {
       setIsLoading(false);
     }
@@ -165,6 +202,7 @@ function ContactSection() {
             </p>
             <a
               href="mailto:hello@sgyouthai.org"
+              onClick={() => posthog?.capture('email_link_clicked', { source: 'contact_section' })}
               className="text-xl font-semibold text-primary-light dark:text-primary-dark hover:underline underline-offset-4 transition-all duration-300"
             >
               hello@sgyouthai.org
@@ -178,7 +216,7 @@ function ContactSection() {
               <input
                 type="text"
                 name="name"
-                id="contact-name" // Changed id to avoid conflict if other forms exist
+                id="contact-name"
                 value={formData.name}
                 onChange={handleChange}
                 disabled={isLoading}
@@ -191,7 +229,7 @@ function ContactSection() {
               <input
                 type="email"
                 name="email"
-                id="contact-email" // Changed id
+                id="contact-email"
                 value={formData.email}
                 disabled={isLoading}
                 onChange={handleChange}
@@ -203,7 +241,7 @@ function ContactSection() {
               <label htmlFor="contact-message" className="block text-sm font-medium mb-1">Message</label>
               <textarea
                 name="message"
-                id="contact-message" // Changed id
+                id="contact-message"
                 rows="5"
                 value={formData.message}
                 disabled={isLoading}
@@ -291,6 +329,18 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
                   <div className="text-primary-light dark:text-primary-dark text-3xl mb-2">300+</div>
                   <div className="font-medium">Active Members</div>
+                </div>
+                <div className="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                  <div className="text-secondary-light dark:text-secondary-dark text-3xl mb-2">50+</div>
+                  <div className="font-medium">Events Organized</div>
+              </div>
+                <div className="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                  <div className="text-primary-light dark:text-primary-dark text-3xl mb-2">4</div>
+                  <div className="font-medium">Polytechnic Partners</div>
+                </div>
+                <div className="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                  <div className="text-secondary-light dark:text-secondary-dark text-3xl mb-2">$65K</div>
+                  <div className="font-medium">Total Funding Secured</div>
                 </div>
               </div>
             </div>
