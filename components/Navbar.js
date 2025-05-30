@@ -26,6 +26,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const { theme, setTheme } = useTheme();
   const posthog = usePostHog();
 
@@ -60,6 +61,14 @@ const Navbar = () => {
   // Define navigation items
   const navItems = [
     { name: "About", href: "#about", type: "scroll" },
+    {
+      name: "Our Initiatives",
+      type: "dropdown",
+      items: [
+        { name: "Secondary School Engagements", href: "/secondary-school-engagements", type: "link" },
+        // Add other initiatives here in the future
+      ]
+    },
     { name: "Bootcamps", href: "#bootcamps", type: "scroll" },
     { name: "AIConnect", href: "#aiconnect", type: "scroll" },
     { name: "AITimes", href: "#aitimes", type: "scroll" },
@@ -74,15 +83,23 @@ const Navbar = () => {
   ];
 
   // Close menu when clicking a link
-  const handleLinkClick = () => {
+  const handleLinkClick = (item) => {
     setIsMenuOpen(false);
+    setOpenDropdown(null);
+    if (item.type === "link" && item.href.startsWith("/")) {
+        posthog?.capture('navigation_clicked', {
+          section: item.name,
+          destination: item.href,
+          source: 'navbar'
+        });
+    }
   };
 
   const handleScroll = (e, href) => {
     e.preventDefault();
     setIsMenuOpen(false);
+    setOpenDropdown(null);
     
-    // Track navigation clicks
     posthog?.capture('navigation_clicked', {
       section: href.replace('#', ''),
       source: 'navbar'
@@ -103,6 +120,7 @@ const Navbar = () => {
       destination: href,
       source: 'navbar'
     });
+    setOpenDropdown(null);
   };
 
   if (!mounted) {
@@ -134,14 +152,40 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out"
-                  onClick={(e) => handleScroll(e, item.href)}
-                >
-                  {item.name}
-                </Link>
+                item.type === "dropdown" ? (
+                  <div key={item.name} className="relative">
+                    <button
+                      onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                      className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out flex items-center"
+                    >
+                      {item.name}
+                      <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${openDropdown === item.name ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    {openDropdown === item.name && (
+                      <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5">
+                        {item.items.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                            onClick={() => handleLinkClick(subItem)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out"
+                    onClick={(e) => item.type === "scroll" ? handleScroll(e, item.href) : handleLinkClick(item)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <Link
                 href="https://t.me/sgyouthai"
@@ -209,14 +253,40 @@ const Navbar = () => {
               {/* Navigation Links */}
               <div className="space-y-2 mb-8">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block py-3 px-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                    onClick={(e) => handleScroll(e, item.href)}
-                  >
-                    {item.name}
-                  </Link>
+                  item.type === "dropdown" ? (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                        className="w-full flex justify-between items-center py-3 px-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {item.name}
+                        <svg className={`w-5 h-5 transition-transform duration-200 ${openDropdown === item.name ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                      </button>
+                      {openDropdown === item.name && (
+                        <div className="pl-4 mt-1 space-y-1">
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block py-2 px-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                              onClick={() => handleLinkClick(subItem)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block py-3 px-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      onClick={(e) => item.type === "scroll" ? handleScroll(e, item.href) : handleLinkClick(item)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
               </div>
               

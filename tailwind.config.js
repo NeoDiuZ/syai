@@ -50,6 +50,20 @@ module.exports = {
         sans: ['var(--font-geist-sans)', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'monospace'],
       },
+      animation: {
+        'gradient-foreground': 'gradient-foreground 8s linear infinite',
+        'subtle-pulse': 'subtle-pulse 2s infinite ease-in-out',
+      },
+      keyframes: {
+        'gradient-foreground': {
+          '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+          '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+        },
+        'subtle-pulse': {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.85', transform: 'scale(1.03)' },
+        },
+      },
     },
   },
   plugins: [],
