@@ -48,19 +48,19 @@ export default function LinkInBio() {
       href: "https://aisdc.aisingapore.org/",
     },
     {
-      name: "SYAI Inspire (Secondary School Workshop) Recruitment",
+      name: "SYAI Inspire (AI Singapore Secondary School Workshop) Recruitment",
       href: "https://forms.gle/cYjQnkqBKeS9vpeo8",
     },
     {
-      name: "SYAI Times (Telegram, newsletter, AI events",
+      name: "SYAI Times (Telegram, Newsletter, AI events)",
       href: "https://t.me/sgyouthai",
     },
     {
-      name: "Discord",
+      name: "Discord (Stay active within the community)",
       href: "https://discord.gg/TacK5vbeDc",
     },
     {
-      name: "Website - sgyouthai.org",
+      name: "Website (sgyouthai.org)",
       href: "https://sgyouthai.org/",
     },
   ];
