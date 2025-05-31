@@ -40,23 +40,19 @@ export default function LinkInBio() {
 
   const links = [
     {
-      name: "Echelon Singapore 2025 by e27",
-      href: "https://sgyouthai.org/events/echelon2025",
+      name: "Join SYAI Committee today!",
+      href: "https://forms.gle/VKgYwhSoB9dChtct8",
     },
     {
       name: "CYS x SYAI Monthly AI Meetup (May 2025)",
       href: "https://aisdc.aisingapore.org/",
     },
     {
-      name: "Join SYAI Committee today!",
-      href: "https://forms.gle/VKgYwhSoB9dChtct8",
-    },
-    {
-      name: "SYAI Inspire Volunteer Recruitment",
+      name: "SYAI Inspire (Secondary School Workshop) Recruitment",
       href: "https://forms.gle/cYjQnkqBKeS9vpeo8",
     },
     {
-      name: "Telegram",
+      name: "SYAI Times (Telegram, newsletter, AI events",
       href: "https://t.me/sgyouthai",
     },
     {
@@ -64,7 +60,7 @@ export default function LinkInBio() {
       href: "https://discord.gg/TacK5vbeDc",
     },
     {
-      name: "Website",
+      name: "Website - sgyouthai.org",
       href: "https://sgyouthai.org/",
     },
   ];
