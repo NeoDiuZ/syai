@@ -912,7 +912,7 @@ export default function Home() {
                 <div className="p-3">
                   <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
                   {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">President</p>
+                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
                   <a 
                     href="https://www.linkedin.com/in/raymond-loong-ng" 
                     target="_blank" 
@@ -1024,7 +1024,7 @@ export default function Home() {
                 <div className="p-3">
                   <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
                   {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">President</p>
+                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
                   <a 
                     href="https://www.linkedin.com/in/raymond-loong-ng" 
                     target="_blank" 
@@ -1208,7 +1208,7 @@ export default function Home() {
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                 <div className="aspect-square relative overflow-hidden">
                   <img 
-                    src="/team/zhu_Bolin.jpg" 
+                    src="/team/zhu_bolin.jpg" 
                     alt="Zhu Bolin" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
@@ -1228,7 +1228,7 @@ export default function Home() {
                     </svg>
                     LinkedIn
                   </a>
-                </div>
+                </div>ret5
               </div>
               {/* Nor Syarah Natasha */}
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
