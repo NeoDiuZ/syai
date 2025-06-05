@@ -1234,7 +1234,7 @@ export default function Home() {
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                 <div className="aspect-square relative overflow-hidden">
                   <img 
-                    src="/team/Beth_Anne_Teo.jpg" 
+                    src="/team/Beth_Anne_Teo.PNG" 
                     alt="Beth Anne Teo" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
