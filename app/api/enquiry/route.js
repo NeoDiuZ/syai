@@ -40,7 +40,7 @@ export async function POST(request) {
 
     // Confirmation email to the sender
     const confirmationEmailToSender = await resend.emails.send({
-      from: 'SYAI Team <onboarding@resend.dev>', // Must be a verified domain or onboarding@resend.dev
+      from: 'SYAI Team <sgyouthai.org>', // Must be a verified domain or onboarding@resend.dev
       to: email, // Sender's email
       subject: 'Thank You for Your SYAI Inspire Enquiry!',
       html: `
