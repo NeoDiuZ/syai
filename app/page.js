@@ -1228,7 +1228,7 @@ export default function Home() {
                     </svg>
                     LinkedIn
                   </a>
-                </div>ret5
+                </div>
               </div>
               {/* Beth Anne Teo */}
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
@@ -1254,7 +1254,7 @@ export default function Home() {
                     </svg>
                     LinkedIn
                   </a>
-                </div>ret5
+                </div>
               </div>
               {/* Nor Syarah Natasha */}
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
