@@ -894,290 +894,294 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Board Members Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
+          {/* Board Members Section - Top of Tree */}
+          <div className="mb-20">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
               Board <span className="text-primary-light dark:text-primary-dark">Members</span>
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 justify-center">
-              {/* Raymond Loong Ng */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/raymond.png" 
-                    alt="Raymond Loong Ng" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+            <div className="flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl">
+                {/* Raymond Loong Ng */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/raymond.png" 
+                      alt="Raymond Loong Ng" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
+                    <a 
+                      href="https://www.linkedin.com/in/raymond-loong-ng" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
-                  <a 
-                    href="https://www.linkedin.com/in/raymond-loong-ng" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/zaer.png" 
+                      alt="cleveland" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Zaer</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
+                    <a 
+                      href="https://www.linkedin.com/in/zaerzaqy" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/zaer.png" 
-                    alt="cleveland" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+                {/* Soh Hong Yu */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/hongyu.png" 
+                      alt="Soh Hong Yu" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Soh Hong Yu</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
+                    <a 
+                      href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Zaer</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
-                  <a 
-                    href="https://www.linkedin.com/in/zaerzaqy" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-              {/* Soh Hong Yu */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/hongyu.png" 
-                    alt="Soh Hong Yu" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Soh Hong Yu</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
-                  <a 
-                    href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
 
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/cleveland.jpg" 
-                    alt="Cleveland" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Cleveland</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
-                  <a 
-                    href="https://www.linkedin.com/in/cleverleverland" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/cleveland.jpg" 
+                      alt="Cleveland" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Cleveland</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Co-Founder</p>
+                    <a 
+                      href="https://www.linkedin.com/in/cleverleverland" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Excommittee Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
+          {/* Executive Committee Section - Second Level */}
+          <div className="mb-20">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
               Executive <span className="text-primary-light dark:text-primary-dark">Committee</span>
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 justify-center">
-              {/* Raymond Loong Ng */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/raymond.png" 
-                    alt="Raymond Loong Ng" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+            <div className="flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl">
+                {/* Raymond Loong Ng */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/raymond.png" 
+                      alt="Raymond Loong Ng" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
+                    <a 
+                      href="https://www.linkedin.com/in/raymond-loong-ng" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Raymond Loong Ng</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Director & President</p>
-                  <a 
-                    href="https://www.linkedin.com/in/raymond-loong-ng" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
+                {/* Soh Hong Yu */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/hongyu.png" 
+                      alt="Soh Hong Yu" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Soh Hong Yu</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
+                    <a 
+                      href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-              </div>
-              {/* Soh Hong Yu */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/hongyu.png" 
-                    alt="Soh Hong Yu" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+                
+                {/* Soh Tze Aan */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/Soh_Tze_Aan.JPG" 
+                      alt="Soh Tze Aan" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Soh Tze Aan</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Treasurer</p>
+                    <a 
+                      href="https://www.linkedin.com/in/tzeaan" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Soh Hong Yu</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Vice President</p>
-                  <a 
-                    href="https://www.linkedin.com/in/soh-hong-yu-ultraraptor" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
+                {/* Xie Kaiwen */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/kaiwen.png" 
+                      alt="Xie Kaiwen" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Xie Kaiwen</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Head of SYAI Inspire</p>
+                    <a 
+                      href="https://www.linkedin.com/in/kaiwen-xie/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Soh Tze Aan */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/Soh_Tze_Aan.JPG" 
-                    alt="Soh Tze Aan" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+                {/* Kaleb Nim */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/kaleb.png" 
+                      alt="Kaleb Nim" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Kaleb Nim</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Head of SYAI Monthly Meetups</p>
+                    <a 
+                      href="https://www.linkedin.com/in/kaleb-nim" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Soh Tze Aan</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Treasurer</p>
-                  <a 
-                    href="https://www.linkedin.com/in/tzeaan" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-              {/* Xie Kaiwen */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/kaiwen.png" 
-                    alt="Xie Kaiwen" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Xie Kaiwen</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Head of SYAI Inspire</p>
-                  <a 
-                    href="https://www.linkedin.com/in/kaiwen-xie/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-              {/* Kaleb Nim */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/kaleb.png" 
-                    alt="Kaleb Nim" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Kaleb Nim</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Head of SYAI Monthly Meetups</p>
-                  <a 
-                    href="https://www.linkedin.com/in/kaleb-nim" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-              {/* Yovita Singh Jolly */}
-              <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src="/team/Yovita_Singh_Jolly.jpg" 
-                    alt="Yovita Singh Jolly" 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-bold text-sm">Yovita Singh Jolly</h3>
-                  {/* Role uses primary color */}
-                  <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Secretary</p>
-                  <a 
-                    href="https://www.linkedin.com/in/yovitasinghjolly" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    LinkedIn
-                  </a>
+                {/* Yovita Singh Jolly */}
+                <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
+                  <div className="aspect-square relative overflow-hidden">
+                    <img 
+                      src="/team/Yovita_Singh_Jolly.jpg" 
+                      alt="Yovita Singh Jolly" 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-sm">Yovita Singh Jolly</h3>
+                    {/* Role uses primary color */}
+                    <p className="text-primary-light dark:text-primary-dark text-xs mb-1">Secretary</p>
+                    <a 
+                      href="https://www.linkedin.com/in/yovitasinghjolly" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Subcommittee Section */}
+          {/* Subcommittee Section - Bottom Level */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 animate-fadeInSlideUp">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
               Sub<span className="text-primary-light dark:text-primary-dark">committee</span>
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
               {/* Ang Zi En Sherlyn */}
               <div className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                 <div className="aspect-square relative overflow-hidden">
@@ -1506,59 +1510,128 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="py-20 bg-surface-light dark:bg-surface-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section id="partners" className="py-20 bg-surface-light dark:bg-surface-dark relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-secondary-light/15 to-primary-light/15 dark:from-secondary-dark/15 dark:to-primary-dark/15 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
               Our <span className="text-primary-light dark:text-primary-dark">Partners</span>
             </h2>
-            {/* Use secondary color for underline */}
-            <div className="mt-2 h-1 w-20 bg-secondary-light dark:bg-secondary-dark mx-auto"></div>
-            <p className="mt-6 text-lg max-w-3xl mx-auto text-text-light/80 dark:text-text-dark/80">
+            <div className="mt-3 h-1.5 w-24 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark mx-auto rounded-full"></div>
+            <p className="mt-8 text-lg max-w-3xl mx-auto text-text-light/80 dark:text-text-dark/80">
               Working together with Singapore&apos;s leading organizations to advance AI education and innovation.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-            {/* Enhance Logo Hovers */}
-            <div className="flex justify-center p-4 hover:scale-110 transition-all duration-300 transform">
-              <img 
-                src="/partners/AISG.png" 
-                alt="AI Singapore" 
-                className="max-h-24 object-contain hover:scale-105 transition-transform"
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Enhanced Partner Cards */}
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/AISG.png" 
+                    alt="AI Singapore" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
             
-            <div className="flex justify-center p-4 hover:scale-110 transition-all duration-300 transform">
-              <img 
-                src="/partners/YCS.png" 
-                alt="Youth Cyber Singapore" 
-                className="max-h-24 object-contain hover:scale-105 transition-transform"
-              />
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/YCS.png" 
+                    alt="Youth Cyber Singapore" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
             
-            <div className="flex justify-center p-4 hover:scale-110 transition-all duration-300 transform">
-              <img 
-                src="/partners/YAC.png" 
-                alt="Young NTUC Advisory Committee" 
-                className="max-h-24 object-contain hover:scale-105 transition-transform"
-              />
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/YAC.png" 
+                    alt="Young NTUC Advisory Committee" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
             
-            <div className="flex justify-center p-4 hover:scale-110 transition-all duration-300 transform">
-              <img 
-                src="/partners/NYC.png" 
-                alt="National Youth Council" 
-                className="max-h-24 object-contain hover:scale-105 transition-transform"
-              />
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/NYC.png" 
+                    alt="National Youth Council" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
             
-            <div className="flex justify-center p-4 hover:scale-110 transition-all duration-300 transform">
-              <img 
-                src="/partners/FORYOUTHS.png" 
-                alt="For Youths" 
-                className="max-h-24 object-contain hover:scale-105 transition-transform"
-              />
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/FORYOUTHS.png" 
+                    alt="For Youths" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/NYPAI.png" 
+                    alt="NYP AI" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/SOI_Club.png" 
+                    alt="SOI Club" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="group perspective-1000">
+              <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center h-24">
+                  <img 
+                    src="/partners/SPAI.png" 
+                    alt="SP AI" 
+                    className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
