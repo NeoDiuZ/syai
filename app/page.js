@@ -419,10 +419,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/AISG.png" 
-                        alt="AI Singapore" 
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        alt="AI Singapore"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -432,10 +434,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/YCS.png" 
-                        alt="Youth Cyber Singapore" 
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        alt="Youth Cyber Singapore"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -445,10 +449,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/YAC.png" 
-                        alt="Young NTUC Advisory Committee" 
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        alt="Young NTUC Advisory Committee"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -458,10 +464,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/NYC.png" 
-                        alt="National Youth Council" 
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        alt="National Youth Council"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -471,10 +479,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/FORYOUTHS.png" 
-                        alt="For Youths" 
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        alt="For Youths"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -484,10 +494,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/NYPAI.png" 
                       alt="NYP AI"
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -497,10 +509,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/SOI_Club.png" 
                       alt="SOI Club"
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -510,10 +524,12 @@ export default function Page() {
                   <div className="relative bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-100 dark:via-white dark:to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 dark:border-gray-300/50 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center h-24">
-                      <img 
+                      <Image 
                         src="/partners/SPAI.png" 
                       alt="SP AI"
-                        className="max-h-20 max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        width={160}
+                        height={80}
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -552,7 +568,7 @@ export default function Page() {
                     ].map((src, index) => (
                       <div key={`ltr-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                         <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                         </div>
                       </div>
                     ))}
@@ -574,7 +590,7 @@ export default function Page() {
                     ].map((src, index) => (
                       <div key={`rtl-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                         <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                         </div>
                       </div>
                     ))}
@@ -596,7 +612,7 @@ export default function Page() {
                     ].map((src, index) => (
                       <div key={`ltr2-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                         <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                         </div>
                       </div>
                     ))}

@@ -84,7 +84,7 @@ export default function ContactSection() {
             </h2>
             <div className="mt-3 h-1.5 w-24 bg-secondary-light dark:bg-secondary-dark mx-auto rounded-full"></div>
             <p className="mt-6 text-lg max-w-2xl mx-auto text-text-light/80 dark:text-text-dark/80">
-              Have a question, suggestion, or partnership inquiry? We'd love to hear from you!
+              Have a question, suggestion, or partnership inquiry? We&apos;d love to hear from you!
             </p>
           </div>
   

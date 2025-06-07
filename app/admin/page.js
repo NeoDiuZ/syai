@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // --- Helper Components ---
 
@@ -301,7 +302,7 @@ export default function AdminPage() {
             <div className="space-y-4 mb-6">
               {team.map((member, index) => (
                 <div key={index} className="flex items-center gap-4 p-3 bg-gray-700 rounded-md">
-                  <img src={member.imageUrl} alt={member.name} className="w-12 h-12 rounded-full object-cover" />
+                  <Image src={member.imageUrl} alt={member.name} width={48} height={48} className="w-12 h-12 rounded-full object-cover" />
                   <div className="flex-grow">
                     <p className="font-semibold">{member.name}</p>
                     <p className="text-sm text-gray-400">{member.role}</p>

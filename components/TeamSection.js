@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 async function getTeamData() {
     // This URL construction will work for both local development and Vercel deployments.
@@ -67,9 +68,11 @@ export default async function TeamSection() {
                   {boardMembers.map((member, index) => (
                     <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                       <div className="aspect-square relative overflow-hidden">
-                        <img 
+                        <Image
                           src={member.imageUrl} 
-                          alt={member.name} 
+                          alt={member.name}
+                          width={200}
+                          height={200}
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
                       </div>
@@ -102,9 +105,11 @@ export default async function TeamSection() {
                   {executiveCommittee.map((member, index) => (
                     <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                       <div className="aspect-square relative overflow-hidden">
-                        <img 
+                        <Image
                           src={member.imageUrl} 
-                          alt={member.name} 
+                          alt={member.name}
+                          width={200}
+                          height={200}
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                         />
                       </div>
@@ -136,9 +141,11 @@ export default async function TeamSection() {
                 {subcommittee.map((member, index) => (
                   <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
                     <div className="aspect-square relative overflow-hidden">
-                      <img 
+                      <Image
                         src={member.imageUrl} 
-                        alt={member.name} 
+                        alt={member.name}
+                        width={200}
+                        height={200}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
