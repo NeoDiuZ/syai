@@ -7,6 +7,8 @@ import TeamSection from "@/components/TeamSection";
 import NewsletterSubscriptionForm from "@/components/NewsletterSubscriptionForm";
 import ContactSection from "@/components/ContactSection";
 
+export const dynamic = 'force-dynamic';
+
 export default function Page() {
   const aiConnectImages = [
     "/gallery/yac2.png",

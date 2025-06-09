@@ -1,17 +1,25 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 async function getTeamData() {
-    // For static generation, always read from file first
+    // Fetch data from the API endpoint instead of the local file.
+    // This ensures we always get the latest data from the database.
     try {
-        const fileContents = await fs.readFile(path.join(process.cwd(), 'data/team.json'), 'utf8');
-        const data = JSON.parse(fileContents);
+        // The NEXT_PUBLIC_BASE_URL should be set in your Vercel environment variables.
+        // For local development, it would be 'http://localhost:3000'.
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+        const res = await fetch(`${baseUrl}/api/team`, { cache: 'no-store' });
+
+        if (!res.ok) {
+            console.error("Failed to fetch team data from API");
+            return [];
+        }
+
+        const data = await res.json();
         return data || [];
-    } catch (fileError) {
-        console.error("Could not read team data file:", fileError);
+    } catch (error) {
+        console.error("Could not fetch team data:", error);
         return [];
     }
 }
@@ -34,7 +42,7 @@ function TeamMemberCard({ member }) {
                     <p className="text-primary-light dark:text-primary-dark text-xs">{member.role}</p>
                 </div>
                 <a
-                    href={member.linkedinUrl}
+                    href={member.linkedinurl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors mt-2"
@@ -112,7 +120,7 @@ export default async function TeamSection() {
               </h3>
               <div className="flex flex-wrap gap-8 justify-center">
                   {boardMembers.map((member) => (
-                    <TeamMemberCard key={member.name} member={member} />
+                    <TeamMemberCard key={member.id} member={member} />
                   ))}
               </div>
             </div>
@@ -124,7 +132,7 @@ export default async function TeamSection() {
               </h3>
               <div className="flex flex-wrap gap-8 justify-center">
                   {executiveCommittee.map((member) => (
-                    <TeamMemberCard key={member.name} member={member} />
+                    <TeamMemberCard key={member.id} member={member} />
                   ))}
               </div>
             </div>
@@ -136,7 +144,7 @@ export default async function TeamSection() {
               </h3>
               <div className="flex flex-wrap gap-8 justify-center">
                 {subcommittee.map((member) => (
-                  <TeamMemberCard key={member.name} member={member} />
+                  <TeamMemberCard key={member.id} member={member} />
                 ))}
               </div>
             </div>
