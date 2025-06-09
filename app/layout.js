@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
+import ConditionalNavbar from "@/components/ConditionalNavbar";
 import { PostHogProvider } from "@/components/providers/posthog-provider";
 import Script from "next/script";
 
@@ -145,7 +145,7 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
+            <ConditionalNavbar />
             <main className="flex-grow">
               {children}
             </main>
