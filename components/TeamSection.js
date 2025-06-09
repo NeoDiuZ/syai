@@ -5,43 +5,90 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 async function getTeamData() {
-    // This URL construction will work for both local development and Vercel deployments.
-    const apiUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}/api/admin/team`
-        : 'http://localhost:3000/api/admin/team';
-
+    // For static generation, always read from file first
     try {
-        // Use { cache: 'no-store' } to ensure fresh data on every request,
-        // which is essential for seeing updates from the admin panel immediately.
-        const res = await fetch(apiUrl, { cache: 'no-store' });
-
-        if (!res.ok) {
-            console.error(`API fetch failed with status: ${res.status}. Falling back to local file.`);
-            // This fallback is crucial for the initial build on Vercel (when services are not yet running)
-            // and for resilience during local development.
-            const fileContents = await fs.readFile(path.join(process.cwd(), 'data/team.json'), 'utf8');
-            return JSON.parse(fileContents);
-        }
-
-        return await res.json();
-    } catch (error) {
-        console.error("Could not fetch team data, falling back to local file:", error);
-        try {
-            const fileContents = await fs.readFile(path.join(process.cwd(), 'data/team.json'), 'utf8');
-            return JSON.parse(fileContents);
-        } catch (fileError) {
-            console.error("Could not read local fallback file:", fileError);
-            return [];
-        }
+        const fileContents = await fs.readFile(path.join(process.cwd(), 'data/team.json'), 'utf8');
+        const data = JSON.parse(fileContents);
+        return data || [];
+    } catch (fileError) {
+        console.error("Could not read team data file:", fileError);
+        return [];
     }
+}
+
+function TeamMemberCard({ member }) {
+    return (
+        <div className="w-56 bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent flex flex-col">
+            <div className="aspect-square relative overflow-hidden">
+                <Image
+                    src={member.imageUrl}
+                    alt={member.name}
+                    width={224}
+                    height={224}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+            </div>
+            <div className="p-4 flex-grow flex flex-col justify-between">
+                <div>
+                    <h3 className="font-bold text-sm h-10">{member.name}</h3>
+                    <p className="text-primary-light dark:text-primary-dark text-xs">{member.role}</p>
+                </div>
+                <a
+                    href={member.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors mt-2"
+                >
+                    <Linkedin className="mr-1 h-4 w-4" />
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    );
 }
 
 export default async function TeamSection() {
     const teamMembers = await getTeamData();
 
-    const boardMembers = teamMembers.filter(m => ["Director & President", "Co-Founder", "Vice President", "Treasurer", "Secretary"].includes(m.role));
-    const executiveCommittee = teamMembers.filter(m => ["Head of SYAI Inspire", "Head of SYAI Monthly Meetups"].includes(m.role));
-    const subcommittee = teamMembers.filter(m => !boardMembers.includes(m) && !executiveCommittee.includes(m));
+    const boardMemberNames = [
+        "Raymond Loong Ng", 
+        "Zaer", 
+        "Soh Hong Yu", 
+        "Cleveland"
+    ];
+    const executiveCommitteeNames = [
+        "Raymond Loong Ng", 
+        "Soh Hong Yu", 
+        "Soh Tze Aan", 
+        "Xie, Kaiwen", 
+        "Kaleb Nim", 
+        "Yovita Singh Jolly"
+    ];
+    const subcommitteeNames = [
+        "Ang Zi En Sherlyn", 
+        "Zhu bolin", 
+        "Beth Anne Teo", 
+        "Nor Syarah Natasha", 
+        "Jaslyn Tan Xuan Ning", 
+        "Vaithiyanathan Sri Kesava Raman", 
+        "Lim Le Shi", 
+        "Cham Si Ao", 
+        "Vijeyakumar Dakshaa", 
+        "Min Thet Khine", 
+        "Perynn Neo Chew Yee Jing"
+    ];
+
+    const boardMembers = teamMembers
+        .filter(m => boardMemberNames.includes(m.name))
+        .sort((a, b) => boardMemberNames.indexOf(a.name) - boardMemberNames.indexOf(b.name));
+    
+    const executiveCommittee = teamMembers
+        .filter(m => executiveCommitteeNames.includes(m.name))
+        .sort((a, b) => executiveCommitteeNames.indexOf(a.name) - executiveCommitteeNames.indexOf(b.name));
+    
+    const subcommittee = teamMembers
+        .filter(m => subcommitteeNames.includes(m.name))
+        .sort((a, b) => subcommitteeNames.indexOf(a.name) - subcommitteeNames.indexOf(b.name));
   
     return (
       <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 text-white">
@@ -57,41 +104,16 @@ export default async function TeamSection() {
             </p>
           </div>
   
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
             {/* Board Members Section - Top of Tree */}
             <div className="mb-20">
               <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
                 Board <span className="text-primary-light dark:text-primary-dark">Members</span>
               </h3>
-              <div className="flex justify-center">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl">
-                  {boardMembers.map((member, index) => (
-                    <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                      <div className="aspect-square relative overflow-hidden">
-                        <Image
-                          src={member.imageUrl} 
-                          alt={member.name}
-                          width={200}
-                          height={200}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
-                      <div className="p-3">
-                        <h3 className="font-bold text-sm">{member.name}</h3>
-                        <p className="text-primary-light dark:text-primary-dark text-xs mb-1">{member.role}</p>
-                        <a 
-                          href={member.linkedinUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                        >
-                          <Linkedin className="mr-1 h-4 w-4" />
-                          LinkedIn
-                        </a>
-                      </div>
-                    </div>
+              <div className="flex flex-wrap gap-8 justify-center">
+                  {boardMembers.map((member) => (
+                    <TeamMemberCard key={member.name} member={member} />
                   ))}
-                </div>
               </div>
             </div>
   
@@ -100,35 +122,10 @@ export default async function TeamSection() {
               <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
                 Executive <span className="text-primary-light dark:text-primary-dark">Committee</span>
               </h3>
-              <div className="flex justify-center">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl">
-                  {executiveCommittee.map((member, index) => (
-                    <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                      <div className="aspect-square relative overflow-hidden">
-                        <Image
-                          src={member.imageUrl} 
-                          alt={member.name}
-                          width={200}
-                          height={200}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                      </div>
-                      <div className="p-3">
-                        <h3 className="font-bold text-sm">{member.name}</h3>
-                        <p className="text-primary-light dark:text-primary-dark text-xs mb-1">{member.role}</p>
-                        <a 
-                          href={member.linkedinUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                        >
-                          <Linkedin className="mr-1 h-4 w-4" />
-                          LinkedIn
-                        </a>
-                      </div>
-                    </div>
+              <div className="flex flex-wrap gap-8 justify-center">
+                  {executiveCommittee.map((member) => (
+                    <TeamMemberCard key={member.name} member={member} />
                   ))}
-                </div>
               </div>
             </div>
   
@@ -137,32 +134,9 @@ export default async function TeamSection() {
               <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
                 Sub<span className="text-primary-light dark:text-primary-dark">committee</span>
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
-                {subcommittee.map((member, index) => (
-                  <div key={index} className="bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent">
-                    <div className="aspect-square relative overflow-hidden">
-                      <Image
-                        src={member.imageUrl} 
-                        alt={member.name}
-                        width={200}
-                        height={200}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                      />
-                    </div>
-                    <div className="p-3">
-                      <h3 className="font-bold text-sm">{member.name}</h3>
-                      <p className="text-primary-light dark:text-primary-dark text-xs mb-1">{member.role}</p>
-                      <a 
-                        href={member.linkedinUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-text-light/60 dark:text-text-dark/60 hover:text-primary-light dark:hover:text-primary-dark inline-flex items-center text-xs transition-colors"
-                      >
-                        <Linkedin className="mr-1 h-4 w-4" />
-                        LinkedIn
-                      </a>
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-8 justify-center">
+                {subcommittee.map((member) => (
+                  <TeamMemberCard key={member.name} member={member} />
                 ))}
               </div>
             </div>
