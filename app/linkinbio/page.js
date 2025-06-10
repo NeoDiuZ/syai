@@ -44,8 +44,8 @@ export default function LinkInBio() {
       href: "https://forms.gle/VKgYwhSoB9dChtct8",
     },
     {
-      name: "CYS x SYAI Monthly AI Meetup (May 2025)",
-      href: "https://aisdc.aisingapore.org/",
+      name: "CYS x SYAI Monthly AI Meetup (Jun 2025)",
+      href: "https://forms.gle/Nvi4jmvXo6mh2PMV6",
     },
     {
       name: "SYAI Inspire (AI Singapore Secondary School Workshop) Recruitment",
