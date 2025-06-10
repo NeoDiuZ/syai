@@ -4,16 +4,16 @@ import { NextResponse } from 'next/server';
 export async function PUT(req, { params }) {
     try {
         const { id } = params;
-        const { name, role, imageUrl, linkedinUrl } = await req.json();
+        const { name, role, imageUrl, linkedinUrl, group } = await req.json();
 
-        if (!id || !name || !role) {
-            return NextResponse.json({ message: 'ID, name, and role are required' }, { status: 400 });
+        if (!id || !name || !role || !group) {
+            return NextResponse.json({ message: 'ID, name, role, and group are required' }, { status: 400 });
         }
 
         const client = await db.connect();
         const result = await client.sql`
             UPDATE team 
-            SET name = ${name}, role = ${role}, "imageUrl" = ${imageUrl}, "linkedinUrl" = ${linkedinUrl}
+            SET name = ${name}, role = ${role}, "imageUrl" = ${imageUrl}, "linkedinUrl" = ${linkedinUrl}, "group" = ${group}
             WHERE id = ${id}
             RETURNING *;
         `;

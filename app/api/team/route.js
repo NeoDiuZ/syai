@@ -15,16 +15,20 @@ export async function GET() {
 
 export async function POST(req) {
     try {
-        const { name, role, imageUrl, linkedinUrl } = await req.json();
+        const { name, role, imageUrl, linkedinUrl, group } = await req.json();
 
-        if (!name || !role) {
-            return NextResponse.json({ message: 'Name and role are required' }, { status: 400 });
+        if (!name || !role || !group) {
+            return NextResponse.json({ message: 'Name, role, and group are required' }, { status: 400 });
         }
 
         const client = await db.connect();
+        
+        const maxOrderRes = await client.sql`SELECT MAX(display_order) as max_order FROM team WHERE "group" = ${group};`;
+        const newOrder = (maxOrderRes.rows[0].max_order || 0) + 1;
+
         const result = await client.sql`
-            INSERT INTO team (name, role, "imageUrl", "linkedinUrl") 
-            VALUES (${name}, ${role}, ${imageUrl}, ${linkedinUrl}) 
+            INSERT INTO team (name, role, "imageUrl", "linkedinUrl", "group", "display_order") 
+            VALUES (${name}, ${role}, ${imageUrl}, ${linkedinUrl}, ${group}, ${newOrder}) 
             RETURNING *;
         `;
         client.release();

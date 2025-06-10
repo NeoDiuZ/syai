@@ -58,45 +58,17 @@ function TeamMemberCard({ member }) {
 export default async function TeamSection() {
     const teamMembers = await getTeamData();
 
-    const boardMemberNames = [
-        "Raymond Loong Ng", 
-        "Zaer", 
-        "Soh Hong Yu", 
-        "Cleveland"
-    ];
-    const executiveCommitteeNames = [
-        "Raymond Loong Ng", 
-        "Soh Hong Yu", 
-        "Soh Tze Aan", 
-        "Xie, Kaiwen", 
-        "Kaleb Nim", 
-        "Yovita Singh Jolly"
-    ];
-    const subcommitteeNames = [
-        "Ang Zi En Sherlyn", 
-        "Zhu bolin", 
-        "Beth Anne Teo", 
-        "Nor Syarah Natasha", 
-        "Jaslyn Tan Xuan Ning", 
-        "Vaithiyanathan Sri Kesava Raman", 
-        "Lim Le Shi", 
-        "Cham Si Ao", 
-        "Vijeyakumar Dakshaa", 
-        "Min Thet Khine", 
-        "Perynn Neo Chew Yee Jing"
-    ];
-
     const boardMembers = teamMembers
-        .filter(m => boardMemberNames.includes(m.name))
-        .sort((a, b) => boardMemberNames.indexOf(a.name) - boardMemberNames.indexOf(b.name));
+        .filter(m => m.group === 'Board Members')
+        .sort((a, b) => a.display_order - b.display_order);
     
     const executiveCommittee = teamMembers
-        .filter(m => executiveCommitteeNames.includes(m.name))
-        .sort((a, b) => executiveCommitteeNames.indexOf(a.name) - executiveCommitteeNames.indexOf(b.name));
+        .filter(m => m.group === 'Executive Committee')
+        .sort((a, b) => a.display_order - b.display_order);
     
     const subcommittee = teamMembers
-        .filter(m => subcommitteeNames.includes(m.name))
-        .sort((a, b) => subcommitteeNames.indexOf(a.name) - subcommitteeNames.indexOf(b.name));
+        .filter(m => m.group === 'Subcommittee')
+        .sort((a, b) => a.display_order - b.display_order);
   
     return (
       <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 text-white">

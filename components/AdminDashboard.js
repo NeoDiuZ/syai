@@ -36,6 +36,17 @@ function EditModal({ item, onSave, onCancel, type }) {
                             <input type="text" name="imageUrl" value={formData.imageUrl} onChange={handleChange} placeholder="Image URL" className="w-full p-2 mb-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
                             <label className="block mb-1 font-semibold">LinkedIn URL</label>
                             <input type="text" name="linkedinUrl" value={formData.linkedinUrl} onChange={handleChange} placeholder="LinkedIn URL" className="w-full p-2 mb-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
+                            <label className="block mb-1 font-semibold">Group</label>
+                            <select
+                                name="group"
+                                value={formData.group}
+                                onChange={handleChange}
+                                className="w-full p-2 mb-2 rounded bg-background-light dark:bg-background-dark border border-gray-600"
+                            >
+                                <option value="Board Members">Board Members</option>
+                                <option value="Executive Committee">Executive Committee</option>
+                                <option value="Subcommittee">Subcommittee</option>
+                            </select>
                         </>
                     )}
                     {type === 'Link' && (
@@ -60,7 +71,7 @@ function EditModal({ item, onSave, onCancel, type }) {
 export default function AdminDashboard() {
   const [teamMembers, setTeamMembers] = useState([]);
   const [links, setLinks] = useState([]);
-  const [newMember, setNewMember] = useState({ name: '', role: '', imageUrl: '', linkedinUrl: '' });
+  const [newMember, setNewMember] = useState({ name: '', role: '', imageUrl: '', linkedinUrl: '', group: 'Subcommittee' });
   const [newLink, setNewLink] = useState({ title: '', url: '' });
   const [editingItem, setEditingItem] = useState(null);
   const [editingType, setEditingType] = useState('');
@@ -104,7 +115,7 @@ export default function AdminDashboard() {
             const err = await res.json();
             throw new Error(err.message);
         }
-        setNewMember({ name: '', role: '', imageUrl: '', linkedinUrl: '' });
+        setNewMember({ name: '', role: '', imageUrl: '', linkedinUrl: '', group: 'Subcommittee' });
         fetchTeam();
     } catch (error) {
         alert(error.message);
@@ -223,6 +234,16 @@ export default function AdminDashboard() {
                 <input type="text" placeholder="Role" value={newMember.role} onChange={(e) => setNewMember({ ...newMember, role: e.target.value })} className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
                 <input type="text" placeholder="Image URL" value={newMember.imageUrl} onChange={(e) => setNewMember({ ...newMember, imageUrl: e.target.value })} className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
                 <input type="text" placeholder="LinkedIn URL" value={newMember.linkedinUrl} onChange={(e) => setNewMember({ ...newMember, linkedinUrl: e.target.value })} className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
+                <select
+                    name="group"
+                    value={newMember.group}
+                    onChange={(e) => setNewMember({ ...newMember, group: e.target.value })}
+                    className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600 md:col-span-2"
+                >
+                    <option value="Board Members">Board Members</option>
+                    <option value="Executive Committee">Executive Committee</option>
+                    <option value="Subcommittee">Subcommittee</option>
+                </select>
             </div>
             <button type="submit" className="mt-4 bg-primary-light hover:opacity-90 dark:bg-primary-dark text-white font-bold py-2 px-4 rounded">Add Member</button>
         </form>
