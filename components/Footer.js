@@ -116,7 +116,7 @@ const Footer = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+                  className="text-text-light dark:text-text-dark opacity-80 hover:opacity-100 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
                   aria-label={item.name}
                 >
                   {item.icon}
@@ -139,7 +139,7 @@ const Footer = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-base text-text-light/80 dark:text-text-dark/80 hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center"
+                        className="text-base text-text-light dark:text-text-dark opacity-80 hover:opacity-100 hover:text-primary-light dark:hover:text-primary-dark transition-colors flex items-center"
                       >
                         {link.name}
                         <svg
@@ -162,7 +162,7 @@ const Footer = () => {
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-base text-text-light/80 dark:text-text-dark/80 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+                        className="text-base text-text-light dark:text-text-dark opacity-80 hover:opacity-100 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -176,7 +176,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-center text-sm text-text-light/70 dark:text-text-dark/70">
+          <p className="text-center text-sm text-text-light dark:text-text-dark opacity-70">
             &copy; {new Date().getFullYear()} Singapore Youth AI. All rights reserved.
           </p>
         </div>

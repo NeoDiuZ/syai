@@ -8,7 +8,7 @@ async function getTeamData() {
     try {
         // The NEXT_PUBLIC_BASE_URL should be set in your Vercel environment variables.
         // For local development, it would be 'http://localhost:3000'.
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
         const res = await fetch(`${baseUrl}/api/team`, { cache: 'no-store' });
 
         if (!res.ok) {
@@ -71,7 +71,7 @@ export default async function TeamSection() {
         .sort((a, b) => a.display_order - b.display_order);
   
     return (
-      <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 text-white">
+      <section id="team" className="w-full py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
@@ -125,11 +125,10 @@ export default async function TeamSection() {
           <div className="mt-10 text-center">
             <Link
               href="#https://forms.gle/VKgYwhSoB9dChtct8"
-              className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x"
+              className="animated-gradient-button rounded-lg px-6 py-3 text-white font-semibold inline-flex items-center"
             >
-              <span className="relative z-10">Join Our Team</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
+              Join Our Team
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>

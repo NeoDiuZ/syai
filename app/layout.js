@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import ConditionalNavbar from "@/components/ConditionalNavbar";
 import { PostHogProvider } from "@/components/providers/posthog-provider";
 import Script from "next/script";
@@ -76,7 +75,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link rel="canonical" href="https://sgyouthai.org" />
         <meta name="geo.region" content="SG" />
@@ -118,7 +117,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto animated-gradient-aurora-sides`}
       >
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_ID && (
@@ -139,17 +138,10 @@ export default function RootLayout({ children }) {
         )}
 
         <PostHogProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ConditionalNavbar />
-            <main className="flex-grow">
-              {children}
-            </main>
-          </ThemeProvider>
+          <ConditionalNavbar />
+          <main className="flex-grow">
+            {children}
+          </main>
         </PostHogProvider>
       </body>
     </html>

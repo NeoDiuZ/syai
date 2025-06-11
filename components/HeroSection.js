@@ -8,50 +8,53 @@ import { usePostHog } from 'posthog-js/react';
 // Import InteractiveGrid with client-side rendering only
 const InteractiveGrid = dynamic(() => import("@/components/InteractiveGrid"), { ssr: false });
 
-const HeroSection = () => {
+export default function HeroSection() {
   const posthog = usePostHog();
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background-light to-surface-light dark:from-background-dark dark:to-surface-dark z-0"></div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background-light to-surface-light z-0"></div>
       
-      {/* Interactive grid pattern */}
-      <InteractiveGrid />
-
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-          <span className="text-primary-light dark:text-primary-dark">Synthetic</span>{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-            Intelligence
-          </span>{" "}
-          <span className="block mt-2">Community</span>
+        {/* Logo */}
+        <div className="mb-8 flex justify-center">
+          <Image 
+            src="/SYAI_Logo.png" 
+            alt="SYAI Logo" 
+            width={128} 
+            height={128} 
+            className="rounded-full shadow-lg"
+          />
+        </div>
+
+        {/* Headline */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-text-light">
+          Singapore&apos;s Premier{" "}
+          <span className="block animated-gradient-text py-2">
+            Youth AI Community
+          </span>
         </h1>
-        <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-text-light/80 dark:text-text-dark/80">
-          Join a vibrant community of AI enthusiasts, researchers, and innovators building 
-          the future of synthetic intelligence together.
+
+        {/* Sub-headline */}
+        <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-text-light/80">
+          Join over 300 of the brightest young minds from polytechnics and JCs to shape the future of AI in Singapore.
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="https://t.me/sgyouthai"
-            onClick={() => posthog?.capture('hero_cta_clicked', { 
-              button_text: 'Join Our Community',
-              destination: 'telegram'
-            })}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative rounded-lg px-6 py-3 text-white font-medium text-lg overflow-hidden group"
+
+        {/* Call to Action Buttons */}
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <Link href="#about"
+            className="animated-gradient-button rounded-lg px-6 py-3 text-white font-semibold inline-flex items-center"
+            onClick={() => posthog.capture('hero_cta_click', { cta_text: 'Explore Our Story' })}
           >
-            <span className="relative z-10">Join the Community</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-gradient-x"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
-            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            Explore Our Story
           </Link>
-          <Link
-            href="#about"
-            className="rounded-lg px-6 py-3 border border-secondary-light dark:border-secondary-dark text-secondary-light dark:text-secondary-dark hover:bg-secondary-light/10 dark:hover:bg-secondary-dark/10 transition-all transform hover:scale-105 font-medium text-lg"
+          <Link href="/contact"
+            className="rounded-lg px-6 py-3 bg-white text-primary-light font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            onClick={() => posthog.capture('hero_cta_click', { cta_text: 'Get In Touch' })}
           >
-            Learn More
+            Get In Touch
           </Link>
         </div>
       </div>
@@ -61,6 +64,4 @@ const HeroSection = () => {
       <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-secondary-light/20 dark:bg-secondary-dark/20 blur-3xl"></div>
     </section>
   );
-};
-
-export default HeroSection; 
+} 

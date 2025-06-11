@@ -45,7 +45,7 @@ const SubSectionCard = ({ title, content, icon: IconComponent, animationClass })
   <div className={`bg-surface-light dark:bg-surface-dark p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ${animationClass || ''}`}>
     {IconComponent && <IconComponent className="w-10 h-10 mb-4 text-primary-light dark:text-primary-dark" />}
     <h3 className="text-xl md:text-2xl font-semibold text-text-light dark:text-text-dark mb-3">{title}</h3>
-    <p className="text-text-light/80 dark:text-text-dark/80 text-sm md:text-base leading-relaxed">{content}</p>
+    <p className="text-text-light dark:text-text-dark opacity-80 text-sm md:text-base leading-relaxed">{content}</p>
   </div>
 );
 
@@ -136,7 +136,7 @@ const EnquiryForm = ({ aisyahEmail, aisyahSubject }) => {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full md:w-auto inline-flex items-center justify-center px-10 py-3 rounded-lg text-lg font-semibold text-white bg-gradient-to-r from-primary-light via-purple-500 to-pink-500 hover:from-primary-dark hover:to-pink-600 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 dark:focus:ring-offset-background-dark disabled:opacity-60 disabled:cursor-not-allowed animate-gradient-x group animate-subtle-pulse"
+                className="animated-gradient-button w-full md:w-auto inline-flex items-center justify-center px-10 py-3 rounded-lg text-lg font-semibold text-white disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -147,10 +147,10 @@ const EnquiryForm = ({ aisyahEmail, aisyahSubject }) => {
                     Submitting...
                   </>
                 ) : 'Send Enquiry'}
-                {!isSubmitting && <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />}
+                {!isSubmitting && <ChevronRight className="w-5 h-5 ml-2" />}
               </button>
             </div>
-            <p className="text-center text-xs text-text-light/70 dark:text-text-dark/70 pt-2">
+            <p className="text-center text-xs text-text-light dark:text-text-dark opacity-70 pt-2">
               Alternatively, you can email us directly at <a href={`mailto:${aisyahEmail}?subject=${encodeURIComponent(aisyahSubject)}`} className="text-primary-light dark:text-primary-dark hover:underline">{aisyahEmail}</a>.
             </p>
           </form>
@@ -185,7 +185,7 @@ export default function SecondarySchoolEngagementsPage() {
                 Ignite AI Potential in Schools
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-text-light/90 dark:text-text-dark/90 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-text-light dark:text-text-dark opacity-90 max-w-3xl mx-auto">
               SYAI brings AI to life for secondary school students! Our engaging workshops and inspiring assembly talks are designed to demystify Artificial Intelligence and empower the next generation of innovators.
             </p>
           </header>
@@ -224,19 +224,19 @@ export default function SecondarySchoolEngagementsPage() {
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-6 md:gap-y-8 px-6 md:px-10">
               <div className="bg-surface-light dark:bg-surface-dark/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-primary-light dark:text-primary-dark mb-2">Overview</h3>
-                <p className="text-text-light/80 dark:text-text-dark/80">A large-scale, cohort-wide learning experience designed to ignite students&apos; passion for AI and its possibilities.</p>
+                <p className="text-text-light dark:text-text-dark opacity-80">A large-scale, cohort-wide learning experience designed to ignite students&apos; passion for AI and its possibilities.</p>
               </div>
               <div className="bg-surface-light dark:bg-surface-dark/70 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-primary-light dark:text-primary-dark mb-2">Duration</h3>
-                <p className="text-text-light/80 dark:text-text-dark/80">1 - 1.5 Hours (Flexible to suit your schedule)</p>
+                <p className="text-text-light dark:text-text-dark opacity-80">1 - 1.5 Hours (Flexible to suit your schedule)</p>
               </div>
               <div className="bg-surface-light dark:bg-surface-dark/70 p-6 rounded-lg md:col-span-2 shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-primary-light dark:text-primary-dark mb-2">Target Group</h3>
-                <p className="text-text-light/80 dark:text-text-dark/80">Ideal for large student groups, adaptable for specific cohorts or mixed year levels.</p>
+                <p className="text-text-light dark:text-text-dark opacity-80">Ideal for large student groups, adaptable for specific cohorts or mixed year levels.</p>
               </div>
               <div className="bg-surface-light dark:bg-surface-dark/70 p-6 rounded-lg md:col-span-2 shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-primary-light dark:text-primary-dark mb-2">Core Content</h3>
-                <ul className="list-none space-y-3 text-text-light/80 dark:text-text-dark/80">
+                <ul className="list-none space-y-3 text-text-light dark:text-text-dark opacity-80">
                   <li className="flex items-start">
                     <ChevronRight className="w-5 h-5 mr-2 mt-1 text-secondary-light dark:text-secondary-dark flex-shrink-0" />
                     <span><strong>AI Sharing Session:</strong> Delivered by our passionate Youth AI Speakers, covering foundational AI, career paths, ethical considerations, and responsible AI use.</span>
@@ -256,7 +256,7 @@ export default function SecondarySchoolEngagementsPage() {
             <div className="bg-primary-light/10 dark:bg-primary-dark/10 p-8 md:p-10 rounded-xl shadow-inner max-w-3xl mx-auto text-center border border-primary-light/30 dark:border-primary-dark/30">
               <Users className="w-12 h-12 text-primary-light dark:text-primary-dark mx-auto mb-4" />
               <h3 className="text-2xl font-semibold text-text-light dark:text-text-dark mb-4">Ideal For: Secondary 3 Students</h3>
-              <p className="text-text-light/80 dark:text-text-dark/80 mb-3">
+              <p className="text-text-light dark:text-text-dark opacity-80 mb-3">
                 Sec 3 is a great time for students to explore AI for EAE applications and future pathways. However, our programs are flexible and can be tailored for other levels based on your school&apos;s specific needs and goals.
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function SecondarySchoolEngagementsPage() {
                 <div key={step.num} className={`bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate__animated animate__fadeInUp ${step.animationDelay} hover:animate-subtle-pulse`}>
                   <div className={`text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-md ${step.bgColor}`}>{step.num}</div>
                   <h3 className="text-xl font-semibold text-text-light dark:text-text-dark mb-2">{step.title}</h3>
-                  <p className="text-text-light/80 dark:text-text-dark/80 text-sm">{step.desc}</p>
+                  <p className="text-text-light dark:text-text-dark opacity-80 text-sm">{step.desc}</p>
                 </div>
               ))}
             </div>

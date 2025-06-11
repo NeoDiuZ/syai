@@ -155,12 +155,11 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="rounded-lg px-8 py-3 bg-gradient-to-r from-primary-light via-purple-500 to-secondary-light dark:from-primary-dark dark:via-purple-600 dark:to-secondary-dark text-white font-semibold hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center relative overflow-hidden group animate-gradient-x disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="animated-gradient-button rounded-lg px-8 py-3 text-white font-semibold inline-flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span className="relative z-10">{isLoading ? 'Sending...' : 'Send Message'}</span>
-                  {!isLoading && <div className="absolute inset-0 bg-gradient-to-r from-primary-light via-purple-500 to-secondary-light dark:from-primary-dark dark:via-purple-600 dark:to-secondary-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>}
+                  {isLoading ? 'Sending...' : 'Send Message'}
                   {!isLoading && (
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 relative z-10 group-hover:translate-x-1 transition-transform">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
                           <line x1="22" y1="2" x2="11" y2="13"></line>
                           <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                       </svg>

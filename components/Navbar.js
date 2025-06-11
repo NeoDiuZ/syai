@@ -191,21 +191,19 @@ const Navbar = () => {
                 href="https://t.me/sgyouthai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-4 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+                className="animated-gradient-button ml-4 px-4 py-2 rounded-lg text-sm font-medium text-white"
                 onClick={() => handleExternalLink("Join Telegram", "https://t.me/sgyouthai")}
               >
-                <span className="relative z-10">Join Telegram</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                Join Telegram
               </Link>
               <Link
                 href="https://discord.gg/TacK5vbeDc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg relative overflow-hidden group animate-gradient-x"
+                className="animated-gradient-button ml-2 px-4 py-2 rounded-lg text-sm font-medium text-white"
                 onClick={() => handleExternalLink("Join Discord", "https://discord.gg/TacK5vbeDc")}
               >
-                <span className="relative z-10">Join Discord</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-gradient-x"></div>
+                Join Discord
               </Link>
             </div>
             
@@ -299,7 +297,7 @@ const Navbar = () => {
                     href={button.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-3 rounded-lg text-base font-medium text-center text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:opacity-90 transition-all duration-300"
+                    className="animated-gradient-button block px-4 py-3 rounded-lg text-base font-medium text-center text-white"
                     onClick={() => {
                       handleExternalLink(button.name, button.href);
                       setIsMenuOpen(false);
