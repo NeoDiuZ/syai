@@ -582,127 +582,170 @@ export default function Page() {
           </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* Enhanced Partner Cards */}
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Premium Glass Morphism Partner Cards */}
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-blue-50/60 to-purple-50/60 dark:from-gray-800/80 dark:via-blue-900/40 dark:to-purple-900/40">
+                    {/* Animated gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-purple-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    {/* Floating orb effect */}
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/AISG.png" 
                         alt="AI Singapore"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    {/* Premium shine effect */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
                 
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-emerald-50/60 to-blue-50/60 dark:from-gray-800/80 dark:via-emerald-900/40 dark:to-blue-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 via-blue-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-blue-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/YCS.png" 
                         alt="Youth Cyber Singapore"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
 
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-purple-50/60 to-pink-50/60 dark:from-gray-800/80 dark:via-purple-900/40 dark:to-pink-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 via-pink-500/10 to-rose-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/YAC.png" 
                         alt="Young NTUC Advisory Committee"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
-              </div>
-            </div>
-          </div>
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
 
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-cyan-50/60 to-blue-50/60 dark:from-gray-800/80 dark:via-cyan-900/40 dark:to-blue-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/NYC.png" 
                         alt="National Youth Council"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
               
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-orange-50/60 to-red-50/60 dark:from-gray-800/80 dark:via-orange-900/40 dark:to-red-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-red-500/10 to-pink-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/FORYOUTHS.png" 
                         alt="For Youths"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
-              </div>
-            </div>
-          </div>
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
           
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-green-50/60 to-emerald-50/60 dark:from-gray-800/80 dark:via-green-900/40 dark:to-emerald-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 via-emerald-500/10 to-teal-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/NYPAI.png" 
-                      alt="NYP AI"
+                        alt="NYP AI"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-                    />
-              </div>
-            </div>
-          </div>
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
 
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-indigo-50/60 to-purple-50/60 dark:from-gray-800/80 dark:via-indigo-900/40 dark:to-purple-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-purple-500/10 to-violet-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/SOI_Club.png" 
-                      alt="SOI Club"
+                        alt="SOI Club"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            </div>
-            </div>
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
             
-                <div className="group perspective-1000">
-                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-200/50 backdrop-blur-sm">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-rose-50/60 to-pink-50/60 dark:from-gray-800/80 dark:via-rose-900/40 dark:to-pink-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-rose-400/10 via-pink-500/10 to-fuchsia-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-rose-400/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/SPAI.png" 
-                      alt="SP AI"
+                        alt="SP AI"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
+                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-          </div>
+              </div>
         </div>
       </section>
 
