@@ -595,7 +595,7 @@ export default function Page() {
                         alt="AI Singapore"
                         width={160}
                         height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        className="max-h-24 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
@@ -614,9 +614,9 @@ export default function Page() {
                       <Image 
                         src="/partners/YCS.png" 
                         alt="Youth Cyber Singapore"
-                        width={160}
-                        height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        width={200}
+                        height={100}
+                        className="max-h-24 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
@@ -654,9 +654,9 @@ export default function Page() {
                       <Image 
                         src="/partners/NYC.png" 
                         alt="National Youth Council"
-                        width={160}
-                        height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        width={240}
+                        height={120}
+                        className="max-h-32 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
@@ -674,9 +674,9 @@ export default function Page() {
                       <Image 
                         src="/partners/FORYOUTHS.png" 
                         alt="For Youths"
-                        width={160}
-                        height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        width={320}
+                        height={160}
+                        className="max-h-40 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
@@ -734,9 +734,9 @@ export default function Page() {
                       <Image 
                         src="/partners/SPAI.png" 
                         alt="SP AI"
-                        width={160}
-                        height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        width={320}
+                        height={160}
+                        className="max-h-40 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
