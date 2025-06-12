@@ -22,8 +22,8 @@ function EditModal({ item, onSave, onCancel, type }) {
     if (!item) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-lg shadow-2xl w-full max-w-md text-text-light dark:text-text-dark">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-50">
+            <div className="glass-card-strong p-8 rounded-2xl shadow-2xl w-full max-w-md text-text-light dark:text-text-dark border border-white/20">
                 <h2 className="text-2xl font-bold mb-4 text-primary-light dark:text-primary-dark">Edit {type}</h2>
                 <form onSubmit={handleSubmit}>
                     {type === 'Team Member' && (
@@ -58,8 +58,8 @@ function EditModal({ item, onSave, onCancel, type }) {
                         </>
                     )}
                     <div className="flex justify-end gap-4 mt-4">
-                        <button type="button" onClick={onCancel} className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Cancel</button>
-                        <button type="submit" className="bg-primary-light hover:opacity-90 dark:bg-primary-dark text-white font-bold py-2 px-4 rounded">Save</button>
+                        <button type="button" onClick={onCancel} className="glass-card-subtle hover:glass-hover bg-gray-500/80 hover:bg-gray-600/90 text-white font-bold py-2 px-4 rounded-lg backdrop-blur-sm border border-white/20 transition-all duration-300">Cancel</button>
+                        <button type="submit" className="glass-card-subtle hover:glass-hover bg-primary-light/80 hover:bg-primary-light/90 text-white font-bold py-2 px-4 rounded-lg backdrop-blur-sm border border-white/20 transition-all duration-300">Save</button>
                     </div>
                 </form>
             </div>
@@ -199,7 +199,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="container mx-auto p-4 sm:p-8 text-text-light dark:text-text-dark">
+    <div className="container mx-auto p-4 sm:p-8 text-text-light dark:text-text-dark pb-20">
         {editingItem && (
             <EditModal 
                 item={editingItem}
@@ -245,7 +245,7 @@ export default function AdminDashboard() {
                     <option value="Subcommittee">Subcommittee</option>
                 </select>
             </div>
-            <button type="submit" className="mt-4 bg-primary-light hover:opacity-90 dark:bg-primary-dark text-white font-bold py-2 px-4 rounded">Add Member</button>
+            <button type="submit" className="mt-4 glass-card-strong hover:glass-hover bg-gray-800/80 hover:bg-gray-900/90 dark:bg-gray-200/80 dark:hover:bg-white/90 text-white dark:text-gray-800 font-bold py-3 px-6 rounded-lg backdrop-blur-sm border border-white/20 dark:border-gray-800/20 transition-all duration-300 transform hover:scale-105">Add Member</button>
         </form>
       </div>
 
@@ -271,7 +271,7 @@ export default function AdminDashboard() {
                 <input type="text" placeholder="Title" value={newLink.title} onChange={(e) => setNewLink({ ...newLink, title: e.target.value })} className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
                 <input type="text" placeholder="URL" value={newLink.url} onChange={(e) => setNewLink({ ...newLink, url: e.target.value })} className="w-full p-2 rounded bg-background-light dark:bg-background-dark border border-gray-600" />
             </div>
-            <button type="submit" className="mt-4 bg-primary-light hover:opacity-90 dark:bg-primary-dark text-white font-bold py-2 px-4 rounded">Add Link</button>
+            <button type="submit" className="mt-4 glass-card-strong hover:glass-hover bg-gray-800/80 hover:bg-gray-900/90 dark:bg-gray-200/80 dark:hover:bg-white/90 text-white dark:text-gray-800 font-bold py-3 px-6 rounded-lg backdrop-blur-sm border border-white/20 dark:border-gray-800/20 transition-all duration-300 transform hover:scale-105">Add Link</button>
         </form>
       </div>
     </div>
