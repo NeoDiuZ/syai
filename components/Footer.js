@@ -103,7 +103,7 @@ const Footer = () => {
           {/* Logo and description */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-bold text-primary-light dark:text-primary-dark">
-              <span className="text-sm mr-1 text-secondary-light dark:text-secondary-dark">SY</span>AI
+              SYAI
             </Link>
             <p className="mt-4 text-base text-text-light dark:text-text-dark max-w-md">
               Empowering the next generation of AI innovators through community, education, 
