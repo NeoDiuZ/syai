@@ -31,9 +31,9 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-text-light">
-          Singapore&apos;s Premier{" "}
+          Singapore&apos;s Largest{" "}
           <span className="block animated-gradient-text py-2">
-            Youth AI Community
+            AI Community
           </span>
         </h1>
 
