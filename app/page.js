@@ -97,14 +97,14 @@ export default function Page() {
             {/* Use secondary color for underline */}
             <div className="mt-2 h-1 w-20 bg-secondary-light mx-auto"></div>
             <p className="mt-6 text-lg max-w-3xl mx-auto text-text-light opacity-80">
-              Our flagship education program is funded with $14,200 to develop the next generation of AI educators. 
+              Our flagship education program is funded with $14,300 to develop the next generation of AI educators. 
               Through this initiative, we collaborate with AI Singapore to launch comprehensive bootcamps that prepare 
               pre-university students to become AI trainers.
             </p>
           </div>
           
           <div className="mb-12">
-            <p className="text-lg max-w-4xl mx-auto text-text-light opacity-80 mb-8">
+            <p className="text-lg max-w-5xl mx-auto text-text-light opacity-80 mb-8">
               These intensive bootcamps cover:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
