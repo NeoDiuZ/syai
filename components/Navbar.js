@@ -61,14 +61,6 @@ const Navbar = () => {
   // Define navigation items
   const navItems = [
     { name: "About", href: "#about", type: "scroll" },
-    {
-      name: "Our Initiatives",
-      type: "dropdown",
-      items: [
-        { name: "Secondary School Engagements", href: "/secondary-school-engagements", type: "link" },
-        // Add other initiatives here in the future
-      ]
-    },
     { name: "Bootcamps", href: "#bootcamps", type: "scroll" },
     { name: "AIConnect", href: "#aiconnect", type: "scroll" },
     { name: "AITimes", href: "#aitimes", type: "scroll" },
@@ -129,7 +121,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/80 dark:bg-surface-dark/90 backdrop-blur-md shadow-lg" : "bg-white/40 backdrop-blur-sm"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
@@ -143,8 +135,8 @@ const Navbar = () => {
                   className="h-12 w-12 md:h-14 md:w-14"
                   priority
                 />
-                <span className="font-bold text-xl md:text-2xl text-gray-900 dark:text-white">
-                  SY<span className="text-blue-600 dark:text-blue-400">AI</span>
+                <span className="font-bold text-xl md:text-2xl text-slate-900 dark:text-white drop-shadow-sm">
+                  SY<span className="text-blue-800 dark:text-blue-400">AI</span>
                 </span>
               </Link>
             </div>
@@ -156,7 +148,7 @@ const Navbar = () => {
                   <div key={item.name} className="relative">
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                      className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out flex items-center"
+                      className="px-3 py-2 rounded-md text-sm font-semibold text-slate-900 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out flex items-center drop-shadow-sm"
                     >
                       {item.name}
                       <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${openDropdown === item.name ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -180,7 +172,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out"
+                    className="px-3 py-2 rounded-md text-sm font-semibold text-slate-900 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out drop-shadow-sm"
                     onClick={(e) => item.type === "scroll" ? handleScroll(e, item.href) : handleLinkClick(item)}
                   >
                     {item.name}
@@ -211,7 +203,7 @@ const Navbar = () => {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-slate-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors drop-shadow-sm"
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
               >
@@ -236,10 +228,10 @@ const Navbar = () => {
           <div className="fixed top-0 right-0 w-80 max-w-[90vw] h-full bg-white dark:bg-gray-800 shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <span className="font-semibold text-lg text-gray-900 dark:text-white">Menu</span>
+              <span className="font-semibold text-lg text-slate-900 dark:text-white">Menu</span>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-slate-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Close menu"
               >
                 <CloseIcon />
@@ -255,7 +247,7 @@ const Navbar = () => {
                     <div key={item.name}>
                       <button
                         onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                        className="w-full flex justify-between items-center py-3 px-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="w-full flex justify-between items-center py-3 px-3 rounded-lg text-base font-medium text-slate-900 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
                       >
                         {item.name}
                         <svg className={`w-5 h-5 transition-transform duration-200 ${openDropdown === item.name ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -266,7 +258,7 @@ const Navbar = () => {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block py-2 px-3 rounded-lg text-base font-medium text-gray-600 dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                              className="block py-2 px-3 rounded-lg text-base font-medium text-slate-800 dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
                               onClick={() => handleLinkClick(subItem)}
                             >
                               {subItem.name}
@@ -279,7 +271,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block py-3 px-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="block py-3 px-3 rounded-lg text-base font-medium text-slate-900 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
                       onClick={(e) => item.type === "scroll" ? handleScroll(e, item.href) : handleLinkClick(item)}
                     >
                       {item.name}

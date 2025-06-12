@@ -474,3 +474,339 @@ img[alt*="Logo"] {
   position: relative;
   z-index: 10;
 }
+
+/* ENHANCED GLASS MORPHISM EFFECT SYSTEM - REAL GLASS BLOCKS */
+@layer utilities {
+  /* Primary Glass Card - Real glass block effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      inset 0 2px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -2px 0 rgba(255, 255, 255, 0.1),
+      inset 2px 0 0 rgba(255, 255, 255, 0.2),
+      inset -2px 0 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.1) 25%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      rgba(255, 255, 255, 0.08) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      transparent 30%, 
+      rgba(255, 255, 255, 0.3) 50%, 
+      transparent 70%);
+    animation: glassShine 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  /* Enhanced Glass Card with stronger effect */
+  .glass-card-strong {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 
+      0 16px 50px rgba(0, 0, 0, 0.2),
+      0 6px 20px rgba(0, 0, 0, 0.15),
+      inset 0 3px 0 rgba(255, 255, 255, 0.7),
+      inset 0 -3px 0 rgba(255, 255, 255, 0.15),
+      inset 3px 0 0 rgba(255, 255, 255, 0.3),
+      inset -3px 0 0 rgba(255, 255, 255, 0.15),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-card-strong::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.15) 25%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      rgba(255, 255, 255, 0.1) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  
+  .glass-card-strong::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: linear-gradient(45deg, 
+      transparent 25%, 
+      rgba(255, 255, 255, 0.4) 50%, 
+      transparent 75%);
+    animation: glassShineStrong 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  /* Subtle Glass Effect for smaller cards */
+  .glass-card-subtle {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.12),
+      0 3px 12px rgba(0, 0, 0, 0.08),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1.5px 0 rgba(255, 255, 255, 0.08),
+      inset 1.5px 0 0 rgba(255, 255, 255, 0.15),
+      inset -1.5px 0 0 rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-card-subtle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.12) 100%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  
+  .glass-card-subtle::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: linear-gradient(45deg, 
+      transparent 35%, 
+      rgba(255, 255, 255, 0.25) 50%, 
+      transparent 65%);
+    animation: glassShineSubtle 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  /* Dark mode variants - Enhanced glass blocks */
+  .dark .glass-card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 4px 16px rgba(0, 0, 0, 0.3),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -2px 0 rgba(255, 255, 255, 0.05),
+      inset 2px 0 0 rgba(255, 255, 255, 0.1),
+      inset -2px 0 0 rgba(255, 255, 255, 0.05);
+  }
+  
+  .dark .glass-card::before {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.04) 25%,
+      rgba(255, 255, 255, 0.02) 50%,
+      rgba(255, 255, 255, 0.06) 75%,
+      rgba(255, 255, 255, 0.03) 100%);
+  }
+  
+  .dark .glass-card-strong {
+    background: rgba(0, 0, 0, 0.35);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 16px 50px rgba(0, 0, 0, 0.5),
+      0 6px 20px rgba(0, 0, 0, 0.4),
+      inset 0 3px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -3px 0 rgba(255, 255, 255, 0.08),
+      inset 3px 0 0 rgba(255, 255, 255, 0.15),
+      inset -3px 0 0 rgba(255, 255, 255, 0.08),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .dark .glass-card-strong::before {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.06) 25%,
+      rgba(255, 255, 255, 0.03) 50%,
+      rgba(255, 255, 255, 0.08) 75%,
+      rgba(255, 255, 255, 0.04) 100%);
+  }
+  
+  .dark .glass-card-subtle {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.35),
+      0 3px 12px rgba(0, 0, 0, 0.25),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1.5px 0 rgba(255, 255, 255, 0.04),
+      inset 1.5px 0 0 rgba(255, 255, 255, 0.08),
+      inset -1.5px 0 0 rgba(255, 255, 255, 0.04);
+  }
+  
+  .dark .glass-card-subtle::before {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.03) 50%,
+      rgba(255, 255, 255, 0.05) 100%);
+  }
+  
+  /* Enhanced hover effects for glass cards */
+  .glass-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .glass-hover:hover.glass-card {
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.2),
+      0 8px 25px rgba(0, 0, 0, 0.15),
+      inset 0 3px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -3px 0 rgba(255, 255, 255, 0.15),
+      inset 3px 0 0 rgba(255, 255, 255, 0.3),
+      inset -3px 0 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .glass-hover:hover.glass-card-strong {
+    box-shadow: 
+      0 25px 80px rgba(0, 0, 0, 0.25),
+      0 10px 30px rgba(0, 0, 0, 0.2),
+      inset 0 4px 0 rgba(255, 255, 255, 0.9),
+      inset 0 -4px 0 rgba(255, 255, 255, 0.2),
+      inset 4px 0 0 rgba(255, 255, 255, 0.4),
+      inset -4px 0 0 rgba(255, 255, 255, 0.2),
+      0 0 0 2px rgba(255, 255, 255, 0.15);
+  }
+  
+  .glass-hover:hover.glass-card-subtle {
+    box-shadow: 
+      0 15px 50px rgba(0, 0, 0, 0.18),
+      0 6px 20px rgba(0, 0, 0, 0.12),
+      inset 0 2px 0 rgba(255, 255, 255, 0.7),
+      inset 0 -2px 0 rgba(255, 255, 255, 0.12),
+      inset 2px 0 0 rgba(255, 255, 255, 0.2),
+      inset -2px 0 0 rgba(255, 255, 255, 0.12);
+  }
+  
+  .dark .glass-hover:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .dark .glass-hover:hover.glass-card {
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 8px 25px rgba(0, 0, 0, 0.4),
+      inset 0 3px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -3px 0 rgba(255, 255, 255, 0.08),
+      inset 3px 0 0 rgba(255, 255, 255, 0.15),
+      inset -3px 0 0 rgba(255, 255, 255, 0.08);
+  }
+  
+  .dark .glass-hover:hover.glass-card-strong {
+    box-shadow: 
+      0 25px 80px rgba(0, 0, 0, 0.7),
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      inset 0 4px 0 rgba(255, 255, 255, 0.35),
+      inset 0 -4px 0 rgba(255, 255, 255, 0.12),
+      inset 4px 0 0 rgba(255, 255, 255, 0.2),
+      inset -4px 0 0 rgba(255, 255, 255, 0.12),
+      0 0 0 2px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .glass-hover:hover.glass-card-subtle {
+    box-shadow: 
+      0 15px 50px rgba(0, 0, 0, 0.5),
+      0 6px 20px rgba(0, 0, 0, 0.35),
+      inset 0 2px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -2px 0 rgba(255, 255, 255, 0.06),
+      inset 2px 0 0 rgba(255, 255, 255, 0.12),
+      inset -2px 0 0 rgba(255, 255, 255, 0.06);
+  }
+  
+  /* Glass content protection - ensures content is readable */
+  .glass-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Glass shine animations */
+  @keyframes glassShine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+  }
+
+  @keyframes glassShineStrong {
+    0% { transform: translateX(-120%) translateY(-120%) rotate(45deg); }
+    50% { transform: translateX(-60%) translateY(-60%) rotate(45deg); }
+    100% { transform: translateX(120%) translateY(120%) rotate(45deg); }
+  }
+
+  @keyframes glassShineSubtle {
+    0% { transform: translateX(-80%) translateY(-80%) rotate(45deg); }
+    50% { transform: translateX(-40%) translateY(-40%) rotate(45deg); }
+    100% { transform: translateX(80%) translateY(80%) rotate(45deg); }
+  }
+
+  /* Marquee carousel animations for infinite event gallery */
+  @keyframes marquee-ltr {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-rtl {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+
+  .marquee-content-ltr {
+    animation: marquee-ltr 60s linear infinite;
+  }
+
+  .marquee-content-ltr:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-content-rtl {
+    animation: marquee-rtl 60s linear infinite;
+  }
+
+  .marquee-content-rtl:hover {
+    animation-play-state: paused;
+  }
+}

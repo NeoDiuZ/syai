@@ -56,22 +56,30 @@ export default function Page() {
                 We recognized a critical gap in Singapore&apos;s AI landscape: despite significant interest among young enthusiasts, there was no unified platform to channel this energy. SYAI was established to fill this void, serving as the premier hub for youth interested in AI. We provide a collaborative space where young talents can connect, develop their skills, and transform their aspirations into impactful, Singapore-focused AI initiatives.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Enhanced Hover Effect */}
-                <div className="bg-background-light p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                  <div className="text-primary-light text-3xl mb-2">300+</div>
-                  <div className="font-medium">Active Members</div>
+                {/* Glass Morphism Statistics Cards */}
+                <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content">
+                    <div className="text-primary-light text-3xl mb-2">300+</div>
+                    <div className="font-medium">Active Members</div>
+                  </div>
                 </div>
-                <div className="bg-background-light p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                  <div className="text-secondary-light text-3xl mb-2">50+</div>
-                  <div className="font-medium">Events Organized</div>
-              </div>
-                <div className="bg-background-light p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                  <div className="text-primary-light text-3xl mb-2">4</div>
-                  <div className="font-medium">Polytechnic Partners</div>
+                <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content">
+                    <div className="text-secondary-light text-3xl mb-2">50+</div>
+                    <div className="font-medium">Events Organized</div>
+                  </div>
                 </div>
-                <div className="bg-background-light p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-                  <div className="text-secondary-light text-3xl mb-2">$65K</div>
-                  <div className="font-medium">Total Funding Secured</div>
+                <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content">
+                    <div className="text-primary-light text-3xl mb-2">3</div>
+                    <div className="font-medium">Polytechnic Partners</div>
+                  </div>
+                </div>
+                <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content">
+                    <div className="text-secondary-light text-3xl mb-2">$64.3K</div>
+                    <div className="font-medium">Total Funding Secured</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -140,7 +148,7 @@ export default function Page() {
           </div>
 
           <p className="text-lg max-w-5xl mx-auto text-text-light opacity-80 mb-8">
-            We&apos;ve established partnerships with AI clubs across four polytechnics (Singapore Polytechnic, Ngee Ann Polytechnic, Nanyang Polytechnic, and Republic Polytechnic) to implement a CCA point program for organizing these bootcamps and recruiting volunteers. Participants receive certification upon completion of the two-day bootcamp conducted by industry engineers, with all meals provided. Graduates then volunteer to conduct AI workshops at secondary schools, sharing their knowledge while earning CCA points from their respective polytechnics.
+            We&apos;ve established partnerships with AI clubs across three polytechnics (Singapore Polytechnic, Nanyang Polytechnic, and Republic Polytechnic) to implement a CCA point program for organizing these bootcamps and recruiting volunteers. Participants receive certification upon completion of the two-day bootcamp conducted by industry engineers, with all meals provided. Graduates then volunteer to conduct AI workshops at secondary schools, sharing their knowledge while earning CCA points from their respective polytechnics.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -229,9 +237,9 @@ export default function Page() {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">Monthly Events</h3>
               <div className="space-y-4">
-                {/* Enhance Card Hovers */}
-                <div className="bg-surface-light p-6 rounded-lg shadow-md hover:shadow-lg hover:border-primary-light border border-transparent hover:-translate-y-1 transition-all duration-300">
-                  <div className="flex justify-between items-start">
+                {/* Glass Morphism Event Cards */}
+                <div className="glass-card-strong glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content flex justify-between items-start">
                     <div>
                       <h4 className="font-bold text-lg">Fireside Chats</h4>
                       <p className="text-text-light opacity-70 text-sm mb-2">Monthly • Various Locations</p>
@@ -246,8 +254,8 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="bg-surface-light p-6 rounded-lg shadow-md hover:shadow-lg hover:border-primary-light border border-transparent hover:-translate-y-1 transition-all duration-300">
-                  <div className="flex justify-between items-start">
+                <div className="glass-card-strong glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content flex justify-between items-start">
                     <div>
                       <h4 className="font-bold text-lg">Project Collaborations</h4>
                       <p className="text-text-light opacity-70 text-sm mb-2">Monthly • Various Locations</p>
@@ -262,8 +270,8 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="bg-surface-light p-6 rounded-lg shadow-md hover:shadow-lg hover:border-primary-light border border-transparent hover:-translate-y-1 transition-all duration-300">
-                  <div className="flex justify-between items-start">
+                <div className="glass-card-strong glass-hover p-6 rounded-lg transition-all duration-300">
+                  <div className="glass-content flex justify-between items-start">
                     <div>
                       <h4 className="font-bold text-lg">Social Activities</h4>
                       <p className="text-text-light opacity-70 text-sm mb-2">Monthly • Various Locations</p>
@@ -388,6 +396,165 @@ export default function Page() {
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link> 
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary School Engagements Section */}
+      <section id="secondary-school-engagements" className="py-20 bg-surface-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
+              Secondary School <span className="text-primary-light">Engagements</span>
+            </h2>
+            <div className="mt-2 h-1 w-20 bg-secondary-light mx-auto"></div>
+            <p className="mt-6 text-lg max-w-3xl mx-auto text-text-light opacity-80">
+              SYAI brings AI to life for secondary school students! Our engaging workshops and inspiring assembly talks are designed to demystify Artificial Intelligence and empower the next generation of innovators.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Why Our AI Engagements?</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="h-10 w-10 rounded-full bg-primary-light/10 flex items-center justify-center text-primary-light flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-lg">Future-Ready Skills</h4>
+                    <p className="text-text-light opacity-80">
+                      We introduce AI as a pivotal skill for Singapore&apos;s Smart Nation future. Early, exciting exposure makes all the difference!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="h-10 w-10 rounded-full bg-primary-light/10 flex items-center justify-center text-primary-light flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 12l2 2 4-4"></path>
+                      <path d="M21 12c.552 0 1-.448 1-1V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v6c0 .552.448 1 1 1"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-lg">Ethical & Critical Thinking</h4>
+                    <p className="text-text-light opacity-80">
+                      Students explore AI&apos;s societal impact and ethical dimensions, fostering a responsible and thoughtful approach to technology.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="h-10 w-10 rounded-full bg-primary-light/10 flex items-center justify-center text-primary-light flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="10,8 16,12 10,16 10,8"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-lg">Engaging & Accessible</h4>
+                    <p className="text-text-light opacity-80">
+                      Our fun, beginner-friendly sessions spark curiosity and build confidence, making complex AI concepts easy to grasp and exciting to learn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src="/gallery/cedar1.png"
+                alt="SYAI Assembly Talk at Cedar Girls' Secondary School"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Assembly Talks Card */}
+            <div className="glass-card-strong glass-hover p-8 rounded-xl transition-all duration-300">
+              <div className="glass-content">
+                <div className="flex items-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light mr-3">
+                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                  </svg>
+                  <h3 className="text-2xl font-semibold">Assembly Talks</h3>
+                </div>
+                <p className="text-text-light opacity-80 mb-4">
+                  Large-scale, cohort-wide learning experiences designed to ignite students&apos; passion for AI and its possibilities.
+                </p>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Duration:</span>
+                    <span>1 - 1.5 Hours</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Target:</span>
+                    <span>Large student groups</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Recommended:</span>
+                    <span>Secondary 3 students</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Workshop Programs Card */}
+            <div className="glass-card-strong glass-hover p-8 rounded-xl transition-all duration-300">
+              <div className="glass-content">
+                <div className="flex items-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-secondary-light mr-3">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                  </svg>
+                  <h3 className="text-2xl font-semibold">Workshop Programs</h3>
+                </div>
+                <p className="text-text-light opacity-80 mb-4">
+                  Interactive hands-on sessions covering AI fundamentals, practical applications, and ethical considerations.
+                </p>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light mt-1 flex-shrink-0">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>AI sharing sessions by Youth AI Speakers</span>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light mt-1 flex-shrink-0">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Interactive fireside chat Q&A sessions</span>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-light mt-1 flex-shrink-0">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Hands-on AI tools and demonstrations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="mailto:hello@sgyouthai.org?subject=Enquiry%3A%20SYAI%20Inspire%20for%20Secondary%20Schools"
+              className="animated-gradient-button rounded-lg px-8 py-4 text-white font-semibold inline-flex items-center text-lg"
+            >
+              Send Enquiry
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -554,73 +721,64 @@ export default function Page() {
           </div>
 
           <div className="space-y-8">
-            {/* Carousel 1: Left to Right */}
-            <div className="overflow-hidden w-full"> {/* Keep overflow-hidden for clipping and hover target */}
-              <div className="flex marquee-content-ltr whitespace-nowrap"> {/* Changed class */} 
-                {[
+            {/* Carousel 1: Left to Right - Infinite Loop */}
+            <div className="overflow-hidden w-full">
+              <div className="flex marquee-content-ltr whitespace-nowrap">
+                {/* Create infinite loop by repeating the image set multiple times */}
+                {Array(4).fill([
                   "/gallery/yac2.png",
                   "/gallery/syaigathering3.png",
                   "/gallery/mindfulhacksxsyai2.png",
                   "/gallery/deepracedash2.png",
-                  "/gallery/yac2.png", // Repeat for seamless loop
-                  "/gallery/syaigathering3.png",
-                  "/gallery/mindfulhacksxsyai2.png",
-                  "/gallery/deepracedash2.png",
-                ].map((src, index) => (
+                ]).flat().map((src, index) => (
                   <div key={`ltr-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                      <Image src={src} alt={`Gallery image ${(index % 4) + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Carousel 2: Right to Left */}
-            <div className="overflow-hidden w-full"> {/* Keep overflow-hidden for clipping and hover target */}
-              <div className="flex marquee-content-rtl whitespace-nowrap"> {/* Changed class */} 
-                {[
+            {/* Carousel 2: Right to Left - Infinite Loop */}
+            <div className="overflow-hidden w-full">
+              <div className="flex marquee-content-rtl whitespace-nowrap">
+                {/* Create infinite loop by repeating the image set multiple times */}
+                {Array(4).fill([
                   "/gallery/yac.png",
                   "/gallery/syaigathering2.png",
                   "/gallery/mindfulhacksxsyai.png",
                   "/gallery/deepracedash3.png",
-                  "/gallery/yac.png", // Repeat for seamless loop
-                  "/gallery/syaigathering2.png",
-                  "/gallery/mindfulhacksxsyai.png",
-                  "/gallery/deepracedash3.png",
-                ].map((src, index) => (
+                ]).flat().map((src, index) => (
                   <div key={`rtl-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                      <Image src={src} alt={`Gallery image ${(index % 4) + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Carousel 3: Left to Right */}
-            <div className="overflow-hidden w-full"> {/* Keep overflow-hidden for clipping and hover target */}
-              <div className="flex marquee-content-ltr whitespace-nowrap"> {/* Changed class */} 
-                {[
+            {/* Carousel 3: Left to Right - Infinite Loop */}
+            <div className="overflow-hidden w-full">
+              <div className="flex marquee-content-ltr whitespace-nowrap">
+                {/* Create infinite loop by repeating the image set multiple times */}
+                {Array(4).fill([
                   "/gallery/syaigathering1.png",
                   "/gallery/deepracedash1.png",
                   "/gallery/cedar2.png",
                   "/gallery/cedar1.png",
-                  "/gallery/syaigathering1.png", // Repeat for seamless loop
-                  "/gallery/deepracedash1.png",
-                  "/gallery/cedar2.png",
-                  "/gallery/cedar1.png",
-                ].map((src, index) => (
+                ]).flat().map((src, index) => (
                   <div key={`ltr2-${index}`} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/5 p-2">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                          <Image src={src} alt={`Gallery image ${index + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
+                      <Image src={src} alt={`Gallery image ${(index % 4) + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"/>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-        </div>
+                </div>
       </section>
       
       {/* ADD THE CONTACT SECTION HERE */}
@@ -631,3 +789,4 @@ export default function Page() {
     </div>
   );
 }
+

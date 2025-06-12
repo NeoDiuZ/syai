@@ -31,6 +31,13 @@ module.exports = {
     'animated-gradient-button',
     'animated-gradient-slow',
     'animated-gradient-fast',
+    'glass-card',
+    'glass-card-strong',
+    'glass-card-subtle',
+    'glass-hover',
+    'glass-content',
+    'marquee-content-ltr',
+    'marquee-content-rtl',
     'bg-600%',
   ],
   theme: {

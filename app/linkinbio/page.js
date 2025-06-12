@@ -40,27 +40,27 @@ export default function LinkInBio() {
 
   const links = [
     {
-      name: "Join SYAI Committee today!",
+      name: "🚀 Join SYAI Committee Today!",
       href: "https://forms.gle/VKgYwhSoB9dChtct8",
     },
     {
-      name: "CYS x SYAI Monthly AI Meetup (Jun 2025)",
+      name: "🤝 Monthly AI Meetup (2025)",
       href: "https://forms.gle/Nvi4jmvXo6mh2PMV6",
     },
     {
-      name: "SYAI Inspire (AI Singapore Secondary School Workshop) Recruitment",
-      href: "https://forms.gle/cYjQnkqBKeS9vpeo8",
+      name: "🎓 SYAI Bootcamps & Workshops",
+      href: "https://sgyouthai.org/#bootcamps",
     },
     {
-      name: "SYAI Times (Telegram, Newsletter, AI events)",
+      name: "📰 SYAI Times Newsletter",
       href: "https://t.me/sgyouthai",
     },
     {
-      name: "Discord (Stay active within the community)",
+      name: "💬 Join Our Discord Community",
       href: "https://discord.gg/TacK5vbeDc",
     },
     {
-      name: "Website (sgyouthai.org)",
+      name: "🌐 Visit Our Website",
       href: "https://sgyouthai.org/",
     },
   ];
@@ -81,71 +81,89 @@ export default function LinkInBio() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full text-center">
-        {/* Profile Image */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative">
-            <Image
-              src="/SYAI_Logo.png"
-              className="h-32 w-32 rounded-full object-cover shadow-lg ring-4 ring-blue-500/20"
-              width={128}
-              height={128}
-              alt="SYAI Logo"
-              priority
-            />
+    <div className="min-h-screen animated-gradient-aurora-sides relative">
+      <div className="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-md w-full text-center">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative glass-card-strong rounded-full p-2">
+              <Image
+                src="/SYAI_Logo.png"
+                className="h-32 w-32 rounded-full object-cover filter-none isolation-isolate"
+                width={128}
+                height={128}
+                alt="SYAI Logo"
+                priority
+                style={{ filter: 'none !important', isolation: 'isolate' }}
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-500/20 pointer-events-none"></div>
+            </div>
           </div>
-        </div>
 
-        {/* Title */}
-        <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
-          Singapore Youth AI
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">@sgyouthai</p>
+          {/* Title */}
+          <div className="glass-card-strong rounded-2xl p-6 mb-8">
+            <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Singapore Youth AI
+            </h1>
+            <p className="text-gray-600 dark:text-gray-300">@sgyouthai</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              Empowering the next generation of AI innovators 🤖✨
+            </p>
+          </div>
 
-        {/* Links */}
-        <div className="space-y-3 mb-10">
-          {links.map((link, idx) => (
-            <Link
-              key={link.name + idx}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => capture_linkInBio(link.name)}
-              className="flex items-center justify-center w-full px-6 py-4 rounded-xl 
-                         bg-white dark:bg-gray-800 
-                         hover:bg-blue-50 dark:hover:bg-gray-700
-                         border border-gray-200 dark:border-gray-700
-                         hover:border-blue-300 dark:hover:border-blue-600
-                         text-gray-900 dark:text-white 
-                         hover:text-blue-600 dark:hover:text-blue-400
-                         font-medium text-center transition-all duration-200 
-                         shadow-sm hover:shadow-md hover:scale-[1.02]
-                         transform"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
+          {/* Links */}
+          <div className="space-y-3 mb-10">
+            {links.map((link, idx) => (
+              <Link
+                key={link.name + idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => capture_linkInBio(link.name)}
+                className="glass-card glass-hover block w-full px-6 py-4 rounded-xl 
+                           text-gray-900 dark:text-white 
+                           font-medium text-center transition-all duration-300 
+                           hover:scale-[1.02] transform group"
+              >
+                <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  {link.name}
+                </span>
+              </Link>
+            ))}
+          </div>
 
-        {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6">
-          {socials.map((social) => (
-            <Link
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => capture_social(social.name)}
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 
-                         hover:bg-blue-500 dark:hover:bg-blue-600 
-                         text-gray-600 dark:text-gray-400 
-                         hover:text-white dark:hover:text-white
-                         transition-all duration-200 hover:scale-110 transform"
-            >
-              {social.icon}
-            </Link>
-          ))}
+          {/* Social Media Icons */}
+          <div className="glass-card-subtle rounded-2xl p-6">
+            <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-4 uppercase tracking-wider">
+              Connect With Us
+            </h3>
+            <div className="flex justify-center space-x-4">
+              {socials.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => capture_social(social.name)}
+                  className="glass-card glass-hover p-3 rounded-full
+                             text-gray-600 dark:text-gray-400 
+                             hover:text-blue-600 dark:hover:text-blue-400
+                             transition-all duration-300 hover:scale-110 transform
+                             hover:shadow-lg"
+                  title={`Follow us on ${social.name}`}
+                >
+                  {social.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="mt-8 text-center">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              © {new Date().getFullYear()} Singapore Youth AI
+            </p>
+          </div>
         </div>
       </div>
     </div>

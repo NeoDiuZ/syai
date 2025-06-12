@@ -88,8 +88,9 @@ export default function ContactSection() {
             </p>
           </div>
   
-          <div className="bg-surface-light dark:bg-surface-dark p-8 sm:p-10 rounded-2xl shadow-xl border border-primary-light/10 dark:border-primary-dark/10">
-            <div className="mb-8 text-center">
+          <div className="glass-card-strong glass-hover p-8 sm:p-10 rounded-2xl">
+            <div className="glass-content">
+              <div className="mb-8 text-center">
               <p className="text-lg mb-2">
                 Reach us directly via email:
               </p>
@@ -167,6 +168,7 @@ export default function ContactSection() {
                 </button>
               </div>
             </form>
+            </div>
           </div>
         </div>
       </section>

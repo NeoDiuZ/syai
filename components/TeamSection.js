@@ -26,7 +26,7 @@ async function getTeamData() {
 
 function TeamMemberCard({ member }) {
     return (
-        <div className="w-56 bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-primary-light dark:hover:border-primary-dark border border-transparent flex flex-col">
+        <div className="w-56 glass-card glass-hover rounded-lg overflow-hidden transition-all duration-300 flex flex-col">
             <div className="aspect-square relative overflow-hidden">
                 <Image
                     src={member.imageUrl}
@@ -36,7 +36,7 @@ function TeamMemberCard({ member }) {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
             </div>
-            <div className="p-4 flex-grow flex flex-col justify-between">
+            <div className="glass-content p-4 flex-grow flex flex-col justify-between">
                 <div>
                     <h3 className="font-bold text-sm h-10">{member.name}</h3>
                     <p className="text-primary-light dark:text-primary-dark text-xs">{member.role}</p>
