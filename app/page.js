@@ -632,8 +632,8 @@ export default function Page() {
                     <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
-                        src="/partners/YAC.png" 
-                        alt="Young NTUC Advisory Committee"
+                        src="/partners/E27.png" 
+                        alt="E27"
                         width={160}
                         height={80}
                         className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
