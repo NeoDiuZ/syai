@@ -714,9 +714,9 @@ export default function Page() {
                       <Image 
                         src="/partners/SOI_Club.png" 
                         alt="SOI Club"
-                        width={160}
-                        height={80}
-                        className="max-h-20 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        width={320}
+                        height={160}
+                        className="max-h-40 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
                         style={{ filter: 'none !important', isolation: 'isolate' }}
                       />
                     </div>
