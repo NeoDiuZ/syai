@@ -157,7 +157,7 @@ export default function Page() {
 
           <div className="mt-12 text-center">
             <Link
-              href="https://forms.gle/cYjQnkqBKeS9vpeo8"
+              href="https://forms.gle/VnQC3ap5hW6k1ZHM7"
               className="rounded-lg px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center relative overflow-hidden group animate-gradient-x bg-200%"
             >
               <span className="relative z-10">Sign up for SYAI Inspire Bootcamps</span>
