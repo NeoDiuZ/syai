@@ -613,7 +613,27 @@ export default function Page() {
                     <div className="relative flex items-center justify-center h-24">
                       <Image 
                         src="/partners/YCS.png" 
-                        alt="Youth Cyber Singapore"
+                        alt="Youth Corps Singapore"
+                        width={200}
+                        height={100}
+                        className="max-h-24 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
+                        style={{ filter: 'none !important', isolation: 'isolate' }}
+                      />
+                    </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group">
+                  <div className="glass-card-strong glass-hover rounded-2xl p-8 relative overflow-hidden bg-gradient-to-br from-white/80 via-emerald-50/60 to-blue-50/60 dark:from-gray-800/80 dark:via-emerald-900/40 dark:to-blue-900/40">
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 via-blue-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-blue-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                    <div className="relative flex items-center justify-center h-24">
+                      <Image 
+                        src="/partners/CYS.png" 
+                        alt="Cyber Youth Singapore"
                         width={200}
                         height={100}
                         className="max-h-24 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
