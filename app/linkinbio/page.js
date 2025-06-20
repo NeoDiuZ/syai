@@ -18,6 +18,32 @@ export default function LinkInBio() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Generate random shimmer colors
+  const generateRandomColor = () => {
+    const colors = [
+      'from-blue-300 to-blue-500',
+      'from-purple-300 to-purple-500',
+      'from-pink-300 to-pink-500',
+      'from-indigo-300 to-indigo-500',
+      'from-cyan-300 to-cyan-500',
+      'from-teal-300 to-teal-500',
+      'from-emerald-300 to-emerald-500',
+      'from-green-300 to-green-500',
+      'from-lime-300 to-lime-500',
+      'from-yellow-300 to-yellow-500',
+      'from-orange-300 to-orange-500',
+      'from-red-300 to-red-500',
+      'from-rose-300 to-rose-500',
+      'from-violet-300 to-violet-500',
+      'from-fuchsia-300 to-fuchsia-500',
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
+
+  const [shimmerColors] = useState(() => 
+    Array.from({ length: 6 }, () => generateRandomColor())
+  );
+
   const socials = [
     {
       name: "Instagram",
@@ -146,11 +172,13 @@ export default function LinkInBio() {
           {/* Links */}
           <div className="space-y-3 mb-10">
             {loading ? (
-              // Loading skeleton
+              // Loading skeleton with random shimmer colors
               <div className="space-y-3">
                 {[...Array(6)].map((_, i) => (
-                  <div key={i} className="glass-card rounded-xl px-6 py-4 animate-pulse">
-                    <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4 mx-auto"></div>
+                  <div key={i} className="glass-card rounded-xl px-6 py-4 relative overflow-hidden">
+                    <div className={`h-4 bg-gradient-to-r ${shimmerColors[i]} rounded w-3/4 mx-auto animate-pulse`}></div>
+                    {/* Additional shimmer effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-x-12 animate-shimmer"></div>
                   </div>
                 ))}
               </div>
