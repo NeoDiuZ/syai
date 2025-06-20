@@ -14,6 +14,9 @@ import {
 export default function LinkInBio() {
   const posthog = usePostHog();
   const [currentUrl, setCurrentUrl] = useState("");
+  const [links, setLinks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const socials = [
     {
@@ -38,32 +41,61 @@ export default function LinkInBio() {
     },
   ];
 
-  const links = [
-    {
-      name: "🚀 Join SYAI Committee Today!",
-      href: "https://forms.gle/VKgYwhSoB9dChtct8",
-    },
-    {
-      name: "🤝 Monthly AI Meetup (2025)",
-      href: "https://forms.gle/Nvi4jmvXo6mh2PMV6",
-    },
-    {
-      name: "🎓 SYAI Bootcamps & Workshops",
-      href: "https://sgyouthai.org/#bootcamps",
-    },
-    {
-      name: "📰 SYAI Times Newsletter",
-      href: "https://t.me/sgyouthai",
-    },
-    {
-      name: "💬 Join Our Discord Community",
-      href: "https://discord.gg/TacK5vbeDc",
-    },
-    {
-      name: "🌐 Visit Our Website",
-      href: "https://sgyouthai.org/",
-    },
-  ];
+  // Fetch links from database
+  useEffect(() => {
+    const fetchLinks = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/api/linkinbio');
+        if (!response.ok) {
+          throw new Error('Failed to fetch links');
+        }
+        const data = await response.json();
+        
+        // Transform database data to match the expected format
+        const transformedLinks = data.map(link => ({
+          name: link.title,
+          href: link.url,
+        }));
+        
+        setLinks(transformedLinks);
+      } catch (err) {
+        console.error('Error fetching links:', err);
+        setError(err.message);
+        // Fallback to hardcoded links if database fails
+        setLinks([
+          {
+            name: "🚀 Join SYAI Committee Today!",
+            href: "https://forms.gle/VKgYwhSoB9dChtct8",
+          },
+          {
+            name: "🤝 Monthly AI Meetup (2025)",
+            href: "https://forms.gle/Nvi4jmvXo6mh2PMV6",
+          },
+          {
+            name: "🎓 SYAI Bootcamps & Workshops",
+            href: "https://sgyouthai.org/#bootcamps",
+          },
+          {
+            name: "📰 SYAI Times Newsletter",
+            href: "https://t.me/sgyouthai",
+          },
+          {
+            name: "💬 Join Our Discord Community",
+            href: "https://discord.gg/TacK5vbeDc",
+          },
+          {
+            name: "🌐 Visit Our Website",
+            href: "https://sgyouthai.org/",
+          },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLinks();
+  }, []);
 
   // Set the current URL (browser-only)
   useEffect(() => {
@@ -113,23 +145,40 @@ export default function LinkInBio() {
 
           {/* Links */}
           <div className="space-y-3 mb-10">
-            {links.map((link, idx) => (
-              <Link
-                key={link.name + idx}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => capture_linkInBio(link.name)}
-                className="glass-card glass-hover block w-full px-6 py-4 rounded-xl 
-                           text-gray-900 dark:text-white 
-                           font-medium text-center transition-all duration-300 
-                           hover:scale-[1.02] transform group"
-              >
-                <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                  {link.name}
-                </span>
-              </Link>
-            ))}
+            {loading ? (
+              // Loading skeleton
+              <div className="space-y-3">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="glass-card rounded-xl px-6 py-4 animate-pulse">
+                    <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4 mx-auto"></div>
+                  </div>
+                ))}
+              </div>
+            ) : error ? (
+              // Error state
+              <div className="glass-card rounded-xl px-6 py-4 text-red-500">
+                Failed to load links. Please try again later.
+              </div>
+            ) : (
+              // Loaded links
+              links.map((link, idx) => (
+                <Link
+                  key={link.name + idx}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => capture_linkInBio(link.name)}
+                  className="glass-card glass-hover block w-full px-6 py-4 rounded-xl 
+                             text-gray-900 dark:text-white 
+                             font-medium text-center transition-all duration-300 
+                             hover:scale-[1.02] transform group"
+                >
+                  <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    {link.name}
+                  </span>
+                </Link>
+              ))
+            )}
           </div>
 
           {/* Social Media Icons */}
