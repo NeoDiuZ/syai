@@ -139,11 +139,23 @@ export default function LinkInBio() {
   };
 
   return (
-    <div className="min-h-screen animated-gradient-aurora-sides relative">
-      <div className="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+    <>
+      <style jsx>{`
+        .linkinbio-text {
+          color: #000000 !important;
+        }
+        .linkinbio-link {
+          color: #000000 !important;
+        }
+        .linkinbio-social {
+          color: #000000 !important;
+        }
+      `}</style>
+      <div className="min-h-screen animated-gradient-aurora-sides relative overflow-auto">
+        <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-md w-full text-center">
           {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-6 flex justify-center">
             <div className="relative glass-card-strong rounded-full p-2">
               <Image
                 src="/SYAI_Logo.png"
@@ -159,18 +171,18 @@ export default function LinkInBio() {
           </div>
 
           {/* Title */}
-          <div className="glass-card-strong rounded-2xl p-6 mb-8">
+          <div className="glass-card-strong rounded-2xl p-6 mb-6">
             <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Singapore Youth AI
             </h1>
-            <p className="text-gray-600 dark:text-gray-300">@sgyouthai</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            <p className="text-black dark:text-gray-100 font-medium linkinbio-text" style={{color: '#000000'}}>@sgyouthai</p>
+            <p className="text-black dark:text-gray-200 mt-2 font-medium linkinbio-text" style={{color: '#000000'}}>
               Empowering the next generation of AI innovators 🤖✨
             </p>
           </div>
 
           {/* Links */}
-          <div className="space-y-3 mb-10">
+          <div className="space-y-3 mb-8">
             {loading ? (
               // Loading skeleton with random shimmer colors
               <div className="space-y-3">
@@ -184,9 +196,9 @@ export default function LinkInBio() {
               </div>
             ) : error ? (
               // Error state
-              <div className="glass-card rounded-xl px-6 py-4 text-red-500">
+                              <div className="glass-card rounded-xl px-6 py-4 text-red-700 dark:text-red-400 font-semibold" style={{color: '#dc2626'}}>
                 Failed to load links. Please try again later.
-              </div>
+                </div>
             ) : (
               // Loaded links
               links.map((link, idx) => (
@@ -197,11 +209,12 @@ export default function LinkInBio() {
                   rel="noopener noreferrer"
                   onClick={() => capture_linkInBio(link.name)}
                   className="glass-card glass-hover block w-full px-6 py-4 rounded-xl 
-                             text-gray-900 dark:text-white 
-                             font-medium text-center transition-all duration-300 
+                             text-black dark:text-gray-100 linkinbio-link
+                             font-semibold text-center transition-all duration-300 
                              hover:scale-[1.02] transform group"
+                  style={{color: '#000000'}}
                 >
-                  <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300" style={{color: '#000000'}}>
                     {link.name}
                   </span>
                 </Link>
@@ -211,7 +224,7 @@ export default function LinkInBio() {
 
           {/* Social Media Icons */}
           <div className="glass-card-subtle rounded-2xl p-6">
-            <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-black dark:text-gray-200 mb-4 uppercase tracking-wider" style={{color: '#000000'}}>
               Connect With Us
             </h3>
             <div className="flex justify-center space-x-4">
@@ -223,10 +236,11 @@ export default function LinkInBio() {
                   rel="noopener noreferrer"
                   onClick={() => capture_social(social.name)}
                   className="glass-card glass-hover p-3 rounded-full
-                             text-gray-600 dark:text-gray-400 
+                             text-black dark:text-gray-300 
                              hover:text-blue-600 dark:hover:text-blue-400
                              transition-all duration-300 hover:scale-110 transform
                              hover:shadow-lg"
+                  style={{color: '#000000'}}
                   title={`Follow us on ${social.name}`}
                 >
                   {social.icon}
@@ -236,13 +250,14 @@ export default function LinkInBio() {
           </div>
 
           {/* Footer */}
-          <div className="mt-8 text-center">
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+          <div className="mt-6 text-center">
+            <p className="text-xs font-medium text-black dark:text-gray-300" style={{color: '#000000'}}>
               © {new Date().getFullYear()} Singapore Youth AI
             </p>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 } 

@@ -82,11 +82,15 @@
   }
   body {
     @apply text-foreground;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
   }
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 /* Custom scroll-reveal animation */
@@ -203,16 +207,17 @@ html {
 .animated-gradient-aurora-sides {
   position: relative;
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
-  overflow: hidden;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .animated-gradient-aurora-sides::before,
 .animated-gradient-aurora-sides::after {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 200px;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
   pointer-events: none;
 }
