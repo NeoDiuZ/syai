@@ -17,7 +17,7 @@ module.exports = {
     // Safelisting gradient classes used in buttons, just in case:
     'bg-gradient-to-r',
     'from-blue-600',
-    'via-purple-600',
+    'via-blue-600',
     'to-blue-600',
     // New gradient animation classes
     'animated-gradient-bg',
@@ -95,4 +95,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}

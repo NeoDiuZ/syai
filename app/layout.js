@@ -40,7 +40,7 @@ export const metadata = {
     siteName: "Singapore Youth AI",
     images: [
       {
-        url: "/SYAI_Logo.png",
+        url: "/SYAI_Logo_White.png",
         width: 1200,
         height: 630,
         alt: "Singapore Youth AI Logo",
@@ -54,7 +54,7 @@ export const metadata = {
     title: "SYAI - Singapore Youth AI | Singapore's Premier Youth AI Community",
     description:
       "Join Singapore's leading youth AI community with 300+ members from polytechnics and JCs. Explore AI education, meetups, and innovation opportunities.",
-    images: ["/SYAI_Logo.png"],
+    images: ["/SYAI_Logo_White.png"],
   },
   robots: {
     index: true,
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
               name: "Singapore Youth AI",
               alternateName: "SYAI",
               url: "https://sgyouthai.org",
-              logo: "https://sgyouthai.org/SYAI_Logo.png",
+              logo: "https://sgyouthai.org/SYAI_Logo_White.png",
               description:
                 "Singapore's premier youth-focused artificial intelligence community connecting 300+ students from polytechnics and junior colleges passionate about AI innovation and education.",
               foundingDate: "2023",
@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto animated-gradient-aurora-sides`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto animated-gradient-aurora-sides dark:text-white`}
       >
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_ID && (
@@ -139,9 +139,7 @@ export default function RootLayout({ children }) {
 
         <PostHogProvider>
           <ConditionalNavbar />
-          <main className="flex-grow">
-            {children}
-          </main>
+          <main className="flex-grow dark">{children}</main>
         </PostHogProvider>
       </body>
     </html>
