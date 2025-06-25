@@ -61,15 +61,15 @@ export default async function TeamSection() {
     const boardMembers = teamMembers
         .filter(m => m.group === 'Board Members')
         .sort((a, b) => a.display_order - b.display_order);
-    
+
     const executiveCommittee = teamMembers
         .filter(m => m.group === 'Executive Committee')
         .sort((a, b) => a.display_order - b.display_order);
-    
+
     const subcommittee = teamMembers
         .filter(m => m.group === 'Subcommittee')
         .sort((a, b) => a.display_order - b.display_order);
-  
+
     return (
       <section id="team" className="w-full py-12 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@ export default async function TeamSection() {
               of AI enthusiasts and create innovative solutions.
             </p>
           </div>
-  
+
           <div>
             {/* Board Members Section - Top of Tree */}
             <div className="mb-20">
@@ -96,7 +96,7 @@ export default async function TeamSection() {
                   ))}
               </div>
             </div>
-  
+
             {/* Executive Committee Section - Second Level */}
             <div className="mb-20">
               <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
@@ -108,7 +108,7 @@ export default async function TeamSection() {
                   ))}
               </div>
             </div>
-  
+
             {/* Subcommittee Section - Bottom Level */}
             <div>
               <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
@@ -121,10 +121,10 @@ export default async function TeamSection() {
               </div>
             </div>
           </div>
-  
+
           <div className="mt-10 text-center">
             <Link
-              href="#https://forms.gle/VKgYwhSoB9dChtct8"
+              href="https://forms.gle/VKgYwhSoB9dChtct8"
               className="animated-gradient-button rounded-lg px-6 py-3 text-white font-semibold inline-flex items-center"
             >
               Join Our Team
@@ -136,4 +136,4 @@ export default async function TeamSection() {
         </div>
       </section>
     );
-  } 
+  }
