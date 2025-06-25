@@ -95,8 +95,8 @@ export default function LinkInBio() {
             href: "https://forms.gle/VKgYwhSoB9dChtct8",
           },
           {
-            name: "🤝 Monthly AI Meetup (2025)",
-            href: "https://forms.gle/Nvi4jmvXo6mh2PMV6",
+            name: "🤝 Monthly AI Meetup (Jul 2025)",
+            href: "https://forms.gle/FdyznpbYyidDW7FdA",
           },
           {
             name: "🎓 SYAI Bootcamps & Workshops",
