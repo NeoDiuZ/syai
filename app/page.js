@@ -11,10 +11,16 @@ export const dynamic = "force-dynamic";
 
 export default function Page() {
   const aiConnectImages = [
-    "/gallery/yac2.png",
-    "/gallery/syaigathering3.png",
-    "/gallery/mindfulhacksxsyai2.png",
-    "/gallery/deepracedash2.png",
+    "/AIMM/March.jpg",
+    "/AIMM/MonthlyAIMeetupJun.jpg",
+    "/AIMM/SYAI_FEB.jpg",
+    "/AIMM/SYAI_FEB2.jpg",
+    "/AIMM/SYAI_MARCH2.jpg",
+    "/AIMM/SYAI_MARCH3.jpg",
+    // "/gallery/yac2.png",
+    // "/gallery/syaigathering3.png",
+    // "/gallery/mindfulhacksxsyai2.png",
+    // "/gallery/deepracedash2.png",
   ];
 
   return (
@@ -298,7 +304,7 @@ export default function Page() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div>
                   {/* Replace existing Image with ImageCarousel */}
-                  <ImageCarousel images={aiConnectImages} />
+                  <ImageCarousel images={aiConnectImages} interval={10000} />
 
                   <div className="space-y-6 mt-8">
                     {" "}
