@@ -71,25 +71,25 @@ export default function Page() {
                     <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
                       <div className="glass-content">
                         <div className="text-primary-light text-3xl mb-2">
-                          300+
+                          400+
                         </div>
-                        <div className="font-medium">Active Members</div>
+                        <div className="font-medium">Members</div>
                       </div>
                     </div>
                     <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
                       <div className="glass-content">
                         <div className="text-secondary-light text-3xl mb-2">
-                          50+
+                          2000+
                         </div>
-                        <div className="font-medium">Events Organized</div>
+                        <div className="font-medium">Students Reached</div>
                       </div>
                     </div>
                     <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
                       <div className="glass-content">
                         <div className="text-primary-light text-3xl mb-2">
-                          3
+                          4
                         </div>
-                        <div className="font-medium">Polytechnic Partners</div>
+                        <div className="font-medium">Academic Partners</div>
                       </div>
                     </div>
                     <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">

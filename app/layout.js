@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "SYAI - Singapore Youth AI | Singapore's Premier Youth AI Community",
   description:
-    "Singapore Youth AI (SYAI) is Singapore's leading youth-focused artificial intelligence community. Join 300+ students from polytechnics and junior colleges passionate about AI innovation, education, and technology.",
+    "Singapore Youth AI (SYAI) is Singapore's leading youth-focused artificial intelligence community. Join 400+ students from polytechnics and junior colleges passionate about AI innovation, education, and technology.",
   keywords:
     "Singapore Youth AI, SYAI, Singapore AI community, youth AI Singapore, artificial intelligence Singapore, AI education, polytechnic AI, junior college AI, Singapore students AI, AI meetups Singapore, AI bootcamps Singapore",
   authors: [{ name: "Singapore Youth AI" }],
@@ -35,7 +35,7 @@ export const metadata = {
   openGraph: {
     title: "SYAI - Singapore Youth AI | Singapore's Premier Youth AI Community",
     description:
-      "Join Singapore's leading youth AI community with 300+ members from polytechnics and JCs. Explore AI education, meetups, and innovation opportunities.",
+      "Join Singapore's leading youth AI community with 400+ members from polytechnics and JCs. Explore AI education, meetups, and innovation opportunities.",
     url: "https://sgyouthai.org",
     siteName: "Singapore Youth AI",
     images: [
@@ -53,7 +53,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "SYAI - Singapore Youth AI | Singapore's Premier Youth AI Community",
     description:
-      "Join Singapore's leading youth AI community with 300+ members from polytechnics and JCs. Explore AI education, meetups, and innovation opportunities.",
+      "Join Singapore's leading youth AI community with 400+ members from polytechnics and JCs. Explore AI education, meetups, and innovation opportunities.",
     images: ["/SYAI_Logo_White.png"],
   },
   robots: {
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
               url: "https://sgyouthai.org",
               logo: "https://sgyouthai.org/SYAI_Logo_White.png",
               description:
-                "Singapore's premier youth-focused artificial intelligence community connecting 300+ students from polytechnics and junior colleges passionate about AI innovation and education.",
+                "Singapore's premier youth-focused artificial intelligence community connecting 400+ students from polytechnics and junior colleges passionate about AI innovation and education.",
               foundingDate: "2023",
               address: {
                 "@type": "PostalAddress",
