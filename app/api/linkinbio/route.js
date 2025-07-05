@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
     try {
         const client = await db.connect();
-        const { rows } = await client.sql`SELECT * FROM linkinbio ORDER BY order;`;
+        const { rows } = await client.sql`SELECT * FROM linkinbio ORDER BY order_by asc;`;
         client.release();
         return NextResponse.json(rows);
     } catch (error) {
