@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
     try {
         const client = await db.connect();
-        const { rows } = await client.sql`SELECT * FROM linkinbio;`;
+        const { rows } = await client.sql`SELECT * FROM linkinbio ORDER BY order;`;
         client.release();
         return NextResponse.json(rows);
     } catch (error) {
@@ -23,8 +23,8 @@ export async function POST(req) {
 
         const client = await db.connect();
         const result = await client.sql`
-            INSERT INTO linkinbio (title, url) 
-            VALUES (${title}, ${url}) 
+            INSERT INTO linkinbio (title, url)
+            VALUES (${title}, ${url})
             RETURNING *;
         `;
         client.release();
@@ -34,4 +34,4 @@ export async function POST(req) {
         console.error('Database Error:', error);
         return NextResponse.json({ message: 'Failed to create link.' }, { status: 500 });
     }
-} 
+}
