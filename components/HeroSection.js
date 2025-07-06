@@ -60,7 +60,7 @@ export default function HeroSection() {
           </Link>
           <Link
             href="/contact"
-            className="rounded-lg px-6 py-3 bg-white text-primary-light text-black font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="rounded-lg px-6 py-3 bg-white text-primary-light text-black dark:text-white font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             onClick={() =>
               posthog.capture("hero_cta_click", { cta_text: "Get In Touch" })
             }
