@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto animated-gradient-aurora-sides dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overscroll-x-auto animated-gradient-aurora-sides dark:text-white dark`}
       >
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_ID && (
