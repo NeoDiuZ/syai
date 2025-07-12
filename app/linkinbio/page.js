@@ -164,10 +164,10 @@ export default function LinkInBio() {
               <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                 Singapore Youth AI
               </h1>
-              <p className="text-black dark:text-gray-100 font-medium linkinbio-text">
+              <p className="text-gray-100 font-medium linkinbio-text">
                 @sgyouthai
               </p>
-              <p className="text-black dark:text-gray-200 mt-2 font-medium linkinbio-text">
+              <p className="text-gray-200 mt-2 font-medium linkinbio-text">
                 Empowering the next generation of AI innovators 🤖✨
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function LinkInBio() {
                     rel="noopener noreferrer"
                     onClick={() => capture_linkInBio(link.name)}
                     className="glass-card glass-hover block w-full px-6 py-4 rounded-xl
-                             text-black dark:text-gray-100 linkinbio-link
+                             text-gray-100 linkinbio-link
                              font-semibold text-center transition-all duration-300
                              hover:scale-[1.02] transform group"
                   >
@@ -222,7 +222,7 @@ export default function LinkInBio() {
 
             {/* Social Media Icons */}
             <div className="glass-card-subtle rounded-2xl p-6">
-              <h3 className="text-sm font-bold text-black dark:text-gray-200 mb-4 uppercase tracking-wider">
+              <h3 className="text-sm font-bold text-gray-200 mb-4 uppercase tracking-wider">
                 Connect With Us
               </h3>
               <div className="flex justify-center space-x-4">
@@ -234,7 +234,7 @@ export default function LinkInBio() {
                     rel="noopener noreferrer"
                     onClick={() => capture_social(social.name)}
                     className="glass-card glass-hover p-3 rounded-full
-                             text-black dark:text-gray-300
+                             text-gray-300
                              hover:text-blue-600 dark:hover:text-blue-400
                              transition-all duration-300 hover:scale-110 transform
                              hover:shadow-lg"
@@ -248,7 +248,7 @@ export default function LinkInBio() {
 
             {/* Footer */}
             <div className="mt-6 text-center">
-              <p className="text-xs font-medium text-black dark:text-gray-300">
+              <p className="text-xs font-medium text-gray-300">
                 © {new Date().getFullYear()} Singapore Youth AI
               </p>
             </div>
