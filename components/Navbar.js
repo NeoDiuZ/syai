@@ -387,7 +387,7 @@ const Navbar = () => {
 
               {/* Footer */}
               <div className="text-center text-gray-500 dark:text-gray-400 text-xs mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <p>© {new Date().getFullYear()} Singapore Youth AI</p>
+                <p>&copy; {new Date().getFullYear()} Singapore Youth AI</p>
               </div>
             </div>
           </div>

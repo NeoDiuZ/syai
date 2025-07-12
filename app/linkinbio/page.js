@@ -138,6 +138,11 @@ export default function LinkInBio() {
     posthog?.capture(`Clicked Social: ${linkName}`);
   };
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <>
       <div className="min-h-screen animated-gradient-aurora-sides relative overflow-auto dark">
@@ -160,7 +165,13 @@ export default function LinkInBio() {
             </div>
 
             {/* Title */}
-            <div className="glass-card-strong rounded-2xl p-6 mb-6">
+            <div
+              className="glass-card-strong rounded-2xl p-6 mb-6"
+              onClick={() => {
+                capture_linkInBio("https://www.sgyouthai.org");
+                openInNewTab("https://www.sgyouthai.org");
+              }}
+            >
               <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
                 Singapore Youth AI
               </h1>
@@ -249,7 +260,7 @@ export default function LinkInBio() {
             {/* Footer */}
             <div className="mt-6 text-center">
               <p className="text-xs font-medium text-gray-300">
-                © {new Date().getFullYear()} Singapore Youth AI
+                &copy; {new Date().getFullYear()} Singapore Youth AI
               </p>
             </div>
           </div>
