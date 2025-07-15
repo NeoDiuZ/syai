@@ -59,7 +59,7 @@ export default function Page() {
                     a passion for artificial intelligence. Our organization
                     began as a way to bring together like-minded individuals
                     interested in AI technology and its applications. Today,
-                    we&apos;ve flourished into a thriving community of over 300
+                    we&apos;ve flourished into a thriving community of over 400
                     youth innovators—and we continue to grow!
                   </p>
                   <p className="text-lg text-text-light opacity-90 mb-8">
