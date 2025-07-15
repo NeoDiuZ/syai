@@ -41,7 +41,7 @@ export default function HeroSection() {
 
         {/* Sub-headline */}
         <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-text-light/80">
-          Join over 300 of the brightest young minds from polytechnics and JCs
+          Join over 400 of the brightest young minds from polytechnics and JCs
           to shape the future of AI in Singapore.
         </p>
 
