@@ -1011,7 +1011,7 @@ export default function Page() {
                     <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-blue-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image
-                        src="/partners/AISG.png"
+                        src="/partners/AI Singapore.png"
                         alt="AI Singapore"
                         width={160}
                         height={80}
@@ -1058,8 +1058,8 @@ export default function Page() {
                     <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-blue-500/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                     <div className="relative flex items-center justify-center h-24">
                       <Image
-                        src="/partners/CYS.png"
-                        alt="Cyber Youth Singapore"
+                        src="/partners/YouthTechSG.png"
+                        alt="Youth Tech Singapore"
                         width={200}
                         height={100}
                         className="max-h-24 w-auto object-contain group-hover:scale-110 transition-all duration-500 filter-none isolation-isolate"
