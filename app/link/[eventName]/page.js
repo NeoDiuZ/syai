@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 const redirectMap = {
   aimm: "https://forms.gle/hakB9A23qGEiYPYW6",
+  ustalks: "https://forms.gle/PCWesZPoncD5S2bF7",
 };
 
 export default function Page({ params }) {
