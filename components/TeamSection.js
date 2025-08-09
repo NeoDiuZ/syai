@@ -25,7 +25,6 @@ async function getTeamData() {
 }
 
 function TeamMemberCard({ member }) {
-  console.log(member);
   return (
     <div className="w-56 glass-card glass-hover rounded-lg overflow-hidden transition-all duration-300 flex flex-col">
       <div className="aspect-square relative overflow-hidden">
