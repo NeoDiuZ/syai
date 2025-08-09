@@ -290,14 +290,14 @@ export default function Page() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
-                  SYAI <span className="text-primary-light">Connect</span>
+                  SYAI <span className="text-primary-light">AI Monthly Meetups</span>
                 </h2>
                 {/* Use secondary color for underline */}
                 <div className="mt-2 h-1 w-20 bg-secondary-light mx-auto"></div>
                 <p className="mt-6 text-lg max-w-3xl mx-auto text-text-light opacity-80">
                   Our community engagement initiative, developed in
-                  collaboration with Cyber Youth Singapore, has secured $50,000
-                  in funding to host monthly AI meetups.
+                  collaboration with YouthTechSG (previously known as Cyber Youth Singapore), has secured $50,000
+                  in funding to host Monthly AI Meetups.
                 </p>
               </div>
 
