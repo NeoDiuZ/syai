@@ -72,6 +72,10 @@ export default async function TeamSection() {
     .filter((m) => m.group === "Subcommittee")
     .sort((a, b) => a.display_order - b.display_order);
 
+  const advisoryBoardMembers = teamMembers
+    .filter((m) => m.group === "Advisory")
+    .sort((a, b) => a.display_order - b.display_order);
+
   return (
     <section id="team" className="w-full py-12 md:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,9 +94,9 @@ export default async function TeamSection() {
           </p>
         </div>
 
-        <div>
+        <div className="space-y-20">
           {/* Board Members Section - Top of Tree */}
-          <div className="mb-20">
+          <div>
             <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
               Board{" "}
               <span className="text-primary-light dark:text-primary-dark">
@@ -107,7 +111,7 @@ export default async function TeamSection() {
           </div>
 
           {/* Executive Committee Section - Second Level */}
-          <div className="mb-20">
+          <div>
             <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
               Executive{" "}
               <span className="text-primary-light dark:text-primary-dark">
@@ -116,6 +120,21 @@ export default async function TeamSection() {
             </h3>
             <div className="flex flex-wrap gap-8 justify-center">
               {executiveCommittee.map((member) => (
+                <TeamMemberCard key={member.id} member={member} />
+              ))}
+            </div>
+          </div>
+
+          {/* Executive Committee Section - Second Level */}
+          <div>
+            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-12 animate-fadeInSlideUp">
+              Advisory{" "}
+              <span className="text-primary-light dark:text-primary-dark">
+                Board
+              </span>
+            </h3>
+            <div className="flex flex-wrap gap-8 justify-center">
+              {advisoryBoardMembers .map((member) => (
                 <TeamMemberCard key={member.id} member={member} />
               ))}
             </div>

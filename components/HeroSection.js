@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { usePostHog } from "posthog-js/react";
+import { totalMembers } from "@/app/const";
 
 // Import InteractiveGrid with client-side rendering only
 const InteractiveGrid = dynamic(() => import("@/components/InteractiveGrid"), {
@@ -41,8 +42,8 @@ export default function HeroSection() {
 
         {/* Sub-headline */}
         <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-text-light/80">
-          Join over 400 of the brightest young minds from polytechnics and JCs
-          to shape the future of AI in Singapore.
+          Join over {totalMembers} of the brightest young minds from
+          polytechnics and JCs to shape the future of AI in Singapore.
         </p>
 
         {/* Call to Action Buttons */}
@@ -59,7 +60,7 @@ export default function HeroSection() {
             Explore Our Story
           </Link>
           <Link
-            href="/contact"
+            href="mailto:hello@sgyouthai.org"
             className="rounded-lg px-6 py-3 bg-white text-primary-light text-black font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             onClick={() =>
               posthog.capture("hero_cta_click", { cta_text: "Get In Touch" })

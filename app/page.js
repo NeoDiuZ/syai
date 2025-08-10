@@ -6,6 +6,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import TeamSection from "@/components/TeamSection";
 import NewsletterSubscriptionForm from "@/components/NewsletterSubscriptionForm";
 import ContactSection from "@/components/ContactSection";
+import { totalMembers } from "./const";
 
 export const dynamic = "force-dynamic";
 
@@ -59,7 +60,8 @@ export default function Page() {
                     a passion for artificial intelligence. Our organization
                     began as a way to bring together like-minded individuals
                     interested in AI technology and its applications. Today,
-                    we&apos;ve flourished into a thriving community of over 400
+                    we&apos;ve flourished into a thriving community of over{" "}
+                    {totalMembers}
                     youth innovators—and we continue to grow!
                   </p>
                   <p className="text-lg text-text-light opacity-90 mb-8">
@@ -77,7 +79,7 @@ export default function Page() {
                     <div className="glass-card glass-hover p-6 rounded-lg transition-all duration-300">
                       <div className="glass-content">
                         <div className="text-primary-light text-3xl mb-2">
-                          400+
+                          {totalMembers}+
                         </div>
                         <div className="font-medium">Members</div>
                       </div>
@@ -290,14 +292,16 @@ export default function Page() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
-                  SYAI <span className="text-primary-light">AI Monthly Meetups</span>
+                  SYAI{" "}
+                  <span className="text-primary-light">AI Monthly Meetups</span>
                 </h2>
                 {/* Use secondary color for underline */}
                 <div className="mt-2 h-1 w-20 bg-secondary-light mx-auto"></div>
                 <p className="mt-6 text-lg max-w-3xl mx-auto text-text-light opacity-80">
                   Our community engagement initiative, developed in
-                  collaboration with YouthTechSG (previously known as Cyber Youth Singapore), has secured $50,000
-                  in funding to host Monthly AI Meetups.
+                  collaboration with YouthTechSG (previously known as Cyber
+                  Youth Singapore), has secured $50,000 in funding to host
+                  Monthly AI Meetups.
                 </p>
               </div>
 
