@@ -82,7 +82,7 @@ const Navbar = () => {
   const navItems = [
     { name: "About", href: "#about", type: "scroll" },
     { name: "Bootcamps", href: "#bootcamps", type: "scroll" },
-    { name: "AIConnect", href: "#aiconnect", type: "scroll" },
+    { name: "AIMM", href: "#aiconnect", type: "scroll" },
     { name: "AITimes", href: "#aitimes", type: "scroll" },
     { name: "Partners", href: "#partners", type: "scroll" },
     { name: "Team", href: "#team", type: "scroll" },
@@ -152,7 +152,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-dark/80 dark:bg-surface-dark/90 backdrop-blur-md shadow-lg" : "bg-surface-dark/40 backdrop-blur-sm"}`}
+        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-surface-dark/90 backdrop-blur-md shadow-lg" : "bg-surface-dark/40 backdrop-blur-sm"}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 md:h-24">
@@ -167,8 +167,8 @@ const Navbar = () => {
                   className="h-12 w-12 md:h-14 md:w-14"
                   priority
                 />
-                <span className="font-bold text-xl md:text-2xl text-black dark:text-white drop-shadow-sm">
-                  SY<span className="text-blue-800 dark:text-blue-400">AI</span>
+                <span className="font-bold text-xl md:text-2xl text-white drop-shadow-sm">
+                  SY<span className="text-blue-400">AI</span>
                 </span>
               </Link>
             </div>
@@ -184,7 +184,7 @@ const Navbar = () => {
                           openDropdown === item.name ? null : item.name
                         )
                       }
-                      className="px-3 py-2 rounded-md text-sm font-semibold text-black dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out flex items-center drop-shadow-sm"
+                      className="px-3 py-2 rounded-md text-sm font-semibold text-gray-300 hover:text-blue-400 hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out flex items-center drop-shadow-sm"
                     >
                       {item.name}
                       <svg
@@ -203,12 +203,12 @@ const Navbar = () => {
                       </svg>
                     </button>
                     {openDropdown === item.name && (
-                      <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5">
+                      <div className="absolute right-0 mt-2 w-64 bg-gray-800 rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5">
                         {item.items.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                            className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700"
                             onClick={() => handleLinkClick(subItem)}
                           >
                             {subItem.name}
@@ -221,7 +221,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="px-3 py-2 rounded-md text-sm font-semibold text-black dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out drop-shadow-sm"
+                    className="px-3 py-2 rounded-md text-sm font-semibold text-gray-300 hover:text-blue-400 hover:bg-blue-900/20 hover:-translate-y-0.5 transform transition-all duration-300 ease-in-out drop-shadow-sm"
                     onClick={(e) =>
                       item.type === "scroll"
                         ? handleScroll(e, item.href)
@@ -263,7 +263,7 @@ const Navbar = () => {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors drop-shadow-sm"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:bg-gray-700 transition-colors drop-shadow-sm"
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
               >
@@ -285,15 +285,13 @@ const Navbar = () => {
           />
 
           {/* Mobile Menu */}
-          <div className="fixed top-0 right-0 w-80 max-w-[90vw] h-full bg-white dark:bg-gray-800 shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
+          <div className="fixed top-0 right-0 w-80 max-w-[90vw] h-full bg-gray-800 shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <span className="font-semibold text-lg text-black dark:text-white">
-                Menu
-              </span>
+            <div className="flex items-center justify-between p-4 border-b border-gray-700">
+              <span className="font-semibold text-lgtext-white">Menu</span>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-mdtext-gray-300 hover:bg-gray-700 transition-colors"
                 aria-label="Close menu"
               >
                 <CloseIcon />
@@ -313,7 +311,7 @@ const Navbar = () => {
                             openDropdown === item.name ? null : item.name
                           )
                         }
-                        className="w-full flex justify-between items-center py-3 px-3 rounded-lg text-base font-medium text-black dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
+                        className="w-full flex justify-between items-center py-3 px-3 rounded-lg text-base font-medium text-gray-300 hover:bg-blue-900/20 hover:text-blue-400 transition-colors"
                       >
                         {item.name}
                         <svg
@@ -337,7 +335,7 @@ const Navbar = () => {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block py-2 px-3 rounded-lg text-base font-medium text-black dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
+                              className="block py-2 px-3 rounded-lg text-base font-medium text-gray-400 hover:bg-blue-900/20 hover:text-blue-400 transition-colors"
                               onClick={() => handleLinkClick(subItem)}
                             >
                               {subItem.name}
@@ -350,7 +348,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block py-3 px-3 rounded-lg text-base font-medium text-black dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-800 dark:hover:text-blue-400 transition-colors"
+                      className="block py-3 px-3 rounded-lg text-base font-medium text-gray-300 hover:bg-blue-900/20 hover:text-blue-400 transition-colors"
                       onClick={(e) =>
                         item.type === "scroll"
                           ? handleScroll(e, item.href)
@@ -365,7 +363,7 @@ const Navbar = () => {
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                <h3 className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-3">
+                <h3 className="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-3">
                   Get Involved
                 </h3>
                 {actionButtons.map((button) => (
@@ -386,7 +384,7 @@ const Navbar = () => {
               </div>
 
               {/* Footer */}
-              <div className="text-center text-gray-500 dark:text-gray-400 text-xs mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+              <div className="text-center text-gray-400 text-xs mt-8 pt-8 border-t border-gray-700">
                 <p>&copy; {new Date().getFullYear()} Singapore Youth AI</p>
               </div>
             </div>
