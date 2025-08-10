@@ -82,7 +82,7 @@ const Navbar = () => {
   const navItems = [
     { name: "About", href: "#about", type: "scroll" },
     { name: "Bootcamps", href: "#bootcamps", type: "scroll" },
-    { name: "AIMM", href: "#aiconnect", type: "scroll" },
+    { name: "AIMM", href: "#aimm", type: "scroll" },
     { name: "AITimes", href: "#aitimes", type: "scroll" },
     { name: "Partners", href: "#partners", type: "scroll" },
     { name: "Team", href: "#team", type: "scroll" },

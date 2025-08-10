@@ -17,7 +17,7 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { name: "AIConnect", href: "#aiconnect" },
+        { name: "AIMM", href: "#aimm" },
         { name: "AITimes", href: "https://t.me/sgyouthai", isExternal: true },
         { name: "Bootcamps", href: "#bootcamps" },
         { name: "Features", href: "#features" },

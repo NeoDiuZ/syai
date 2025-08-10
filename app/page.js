@@ -11,7 +11,7 @@ import { totalMembers } from "./const";
 export const dynamic = "force-dynamic";
 
 export default function Page() {
-  const aiConnectImages = [
+  const aiMMImages = [
     "/AIMM/March.jpg",
     "/AIMM/MonthlyAIMeetupJun.jpg",
     "/AIMM/SYAI_FEB.jpg",
@@ -287,8 +287,8 @@ export default function Page() {
             </div>
           </section>
 
-          {/* AIConnect Section */}
-          <section id="aiconnect" className="py-20 bg-background-light">
+          {/* AIMM Section */}
+          <section id="aimm" className="py-20 bg-background-light">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold animate-fadeInSlideUp">
@@ -308,7 +308,7 @@ export default function Page() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div>
                   {/* Replace existing Image with ImageCarousel */}
-                  <ImageCarousel images={aiConnectImages} interval={10000} />
+                  <ImageCarousel images={aiMMImages} interval={10000} />
 
                   <div className="space-y-6 mt-8">
                     {" "}
