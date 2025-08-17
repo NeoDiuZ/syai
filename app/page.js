@@ -465,7 +465,7 @@ export default function Page() {
                   <div className="mt-6 text-center">
                     {/* Enhanced Button Hover */}
                     <Link
-                      href="https://forms.gle/FdyznpbYyidDW7FdA"
+                      href="https://www.sgyouthai.org/link/aimm-signup"
                       className="animated-gradient-button rounded-lg px-6 py-3 text-white font-semibold inline-flex items-center"
                     >
                       Register for this month&apos;s AI Meetup
