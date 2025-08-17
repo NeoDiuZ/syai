@@ -7,6 +7,7 @@ const redirectMap = {
   aimm: "https://forms.gle/hakB9A23qGEiYPYW6",
   ustalk: "https://forms.gle/PCWesZPoncD5S2bF7",
   ustalkfeedback: "https://forms.gle/AHnzSCMxPHNCa46P8",
+  "aimm-signup": "https://forms.gle/EHgjNzUxf4dcvvoF7"
 };
 
 export default function Page({ params }) {
