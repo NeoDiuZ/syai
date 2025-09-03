@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import ImageCarousel from "@/components/ImageCarousel";
 import TeamSection from "@/components/TeamSection";
 import NewsletterSubscriptionForm from "@/components/NewsletterSubscriptionForm";
-import ContactSection from "@/components/ContactSection";
+// import ContactSection from "@/components/ContactSection";
 import { totalMembers } from "./const";
 
 export const dynamic = "force-dynamic";
@@ -1332,7 +1332,7 @@ export default function Page() {
           </section>
 
           {/* ADD THE CONTACT SECTION HERE */}
-          <ContactSection />
+          {/* <ContactSection /> */}
         </section>
       </main>
       <Footer />

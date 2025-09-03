@@ -13,23 +13,23 @@ export default function ContactSection() {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const posthog = usePostHog();
-  
+
     const handleChange = (e) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-  
+
     const handleSubmit = async (e) => {
       e.preventDefault();
       setError('');
       setIsSubmitted(false);
       setIsLoading(true);
-  
+
       // Track contact form attempt
       posthog?.capture('contact_form_attempted', {
         message_length: formData.message.length,
         email_domain: formData.email.split('@')[1] || 'unknown'
       });
-  
+
       if (!formData.name || !formData.email || !formData.message) {
         setError('All fields are required.');
         setIsLoading(false);
@@ -40,22 +40,22 @@ export default function ContactSection() {
         setIsLoading(false);
         return;
       }
-  
+
       try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         });
-        
+
         const responseData = await response.json();
-  
+
         if (!response.ok) {
           throw new Error(responseData.message || 'Failed to submit message.');
         }
         setIsSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
-        
+
         // Track successful contact form submission
         posthog?.capture('contact_form_successful', {
           message_length: formData.message.length,
@@ -64,7 +64,7 @@ export default function ContactSection() {
       } catch (err) {
         setError(err.message || 'An error occurred. Please try again.');
         setIsSubmitted(false);
-        
+
         // Track failed contact form submission
         posthog?.capture('contact_form_failed', {
           error: err.message,
@@ -74,7 +74,7 @@ export default function ContactSection() {
         setIsLoading(false);
       }
     };
-  
+
     return (
       <section id="contact" className="py-20 bg-background-light dark:bg-background-dark">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +87,7 @@ export default function ContactSection() {
               Have a question, suggestion, or partnership inquiry? We&apos;d love to hear from you!
             </p>
           </div>
-  
+
           <div className="glass-card-strong glass-hover p-8 sm:p-10 rounded-2xl">
             <div className="glass-content">
               <div className="mb-8 text-center">
@@ -103,7 +103,7 @@ export default function ContactSection() {
               </a>
               <p className="mt-6 text-lg">Or, use the form below to send us a message:</p>
             </div>
-  
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-medium mb-1">Full Name</label>
@@ -144,14 +144,14 @@ export default function ContactSection() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark outline-none transition-all duration-300 bg-background-light dark:bg-background-dark"
                 ></textarea>
               </div>
-  
+
               {error && (
                 <p className="text-sm text-red-500 dark:text-red-400">{error}</p>
               )}
               {isSubmitted && (
                 <p className="text-sm text-green-600 dark:text-green-400">Thank you! Your message has been sent successfully.</p>
               )}
-  
+
               <div className="text-center">
                 <button
                   type="submit"
