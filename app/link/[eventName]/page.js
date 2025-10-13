@@ -8,6 +8,8 @@ const redirectMap = {
   ustalk: "https://forms.gle/PCWesZPoncD5S2bF7",
   ustalkfeedback: "https://forms.gle/AHnzSCMxPHNCa46P8",
   "aimm-signup": "https://forms.gle/yBH5qag2P31xT34u7",
+  AIForAll:
+    "https://ai-for-all-singapore.mn.co/share/2w1cs5Ry9rSzrRO5?utm_source=SingaporeYouthAI",
 };
 
 export default function Page({ params }) {
