@@ -10,6 +10,8 @@ const redirectMap = {
   "aimm-signup": "https://forms.gle/yBH5qag2P31xT34u7",
   aiforall:
     "https://ai-for-all-singapore.mn.co/share/2w1cs5Ry9rSzrRO5?utm_source=SingaporeYouthAI",
+  hatchaifa:
+"https://drive.google.com/file/d/1qnlnlDaQ_E9uv7P43DfY-h-guKuniGfb/view"
 };
 
 export default function Page({ params }) {
