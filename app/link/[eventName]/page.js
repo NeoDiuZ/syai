@@ -7,7 +7,7 @@ const redirectMap = {
   aimm: "https://forms.gle/3mDa6RYmzuzHLA6q7",
   ustalk: "https://forms.gle/PCWesZPoncD5S2bF7",
   ustalkfeedback: "https://forms.gle/AHnzSCMxPHNCa46P8",
-  "aimm-signup": "https://forms.gle/9iKK6p6AJawMzLGZ8",
+  "aimm-signup": "https://forms.gle/oy1zqULCzKe4YFTQA",
   aiforall:
     "https://ai-for-all-singapore.mn.co/share/2w1cs5Ry9rSzrRO5?utm_source=SingaporeYouthAI",
   hatchaifa:
