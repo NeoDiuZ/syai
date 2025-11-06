@@ -11,7 +11,7 @@ const redirectMap = {
   aiforall:
     "https://ai-for-all-singapore.mn.co/share/2w1cs5Ry9rSzrRO5?utm_source=SingaporeYouthAI",
   hatchaifa:
-"https://drive.google.com/file/d/1qnlnlDaQ_E9uv7P43DfY-h-guKuniGfb/view"
+"https://drive.google.com/file/d/1iv2857jRBpBczYv-ixjwsuxIgkztTfg9/view?usp=drivesdk"
 };
 
 export default function Page({ params }) {
